@@ -785,3 +785,29 @@ html, body {
     height: auto !important;
     overflow-y: auto !important;
 }
+/* ===== FIX MOBILE NAV MENU (FINAL WORKING FIX) ===== */
+@media (max-width: 768px) {
+
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav ul {
+        display: block;
+        max-height: 50vh;        /* ✅ LIMIT HEIGHT */
+        overflow-y: scroll;      /* ✅ FORCE SCROLL */
+        background: #0d5c3f;
+    }
+
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 12px;
+        display: block;
+    }
+}

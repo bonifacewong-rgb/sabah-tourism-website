@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Sabah - Home | Borneo's Tropical Paradise</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Embedded CSS (Internal) -->
+    <style>
+        .welcome-banner {
+            background: linear-gradient(135deg, #0d5c3f 0%, #1a8a5f 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-banner::before {
+            content: '✦';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 2em;
+            color: rgba(255,215,0,0.3);
+        }
+
+        .welcome-banner::after {
+            content: '✦';
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 2em;
+            color: rgba(255,215,0,0.3);
+        }
+
+        .welcome-banner h2 {
+            color: #ffd700;
+            border: none;
+            font-size: 2.2em;
+            margin: 0 0 15px 0;
+        }
+
+        .welcome-banner p {
+            color: #e0f0e8;
+            text-align: center;
+            font-size: 1.1em;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .destinations-preview {
+            margin: 40px 0;
+        }
+
+        .destinations-preview h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #0d5c3f;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with background image -->
+    <header>
+        <div class="header-content">
+            <!-- Inline CSS demonstration -->
+            <h1 style="font-size: 3.2em; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 3px;">Discover Sabah</h1>
+            <p class="tagline">The Land Below the Wind Awaits You</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Sabah</a></li>
+            <li><a href="kinabalu.html">Mount Kinabalu</a></li>
+            <li><a href="sipadan.html">Sipadan Island</a></li>
+            <li><a href="sepilok.html">Sepilok</a></li>
+            <li><a href="kk.html">Kota Kinabalu</a></li>
+            <li><a href="maliau.html">Maliau Basin</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="guide.html">Travel Guide</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Welcome Banner with embedded CSS -->
+        <section class="welcome-banner">
+            <h2>Welcome to Sabah, Borneo</h2>
+            <p>Discover a land of breathtaking beauty where ancient rainforests meet pristine beaches, majestic mountains touch the clouds, and vibrant cultures come alive. Sabah offers unforgettable adventures for every traveler.</p>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1>Your Adventure Starts Here</h1>
+            <p>From the soaring peaks of Mount Kinabalu to the underwater wonders of Sipadan Island, Sabah is a treasure trove of natural beauty and cultural richness waiting to be explored.</p>
+            <a href="about.html" class="btn">Explore Sabah</a>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-container">
+            <div class="stat-box">
+                <div class="stat-number">5</div>
+                <div class="stat-label">UNESCO Sites</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">4,095m</div>
+                <div class="stat-label">Mt. Kinabalu Peak</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">32+</div>
+                <div class="stat-label">Ethnic Groups</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">1,400+</div>
+                <div class="stat-label">Orchid Species</div>
+            </div>
+        </section>
+
+        <!-- Featured Destinations -->
+        <section class="destinations-preview">
+            <h2>Featured Destinations</h2>
+            <div class="card-grid">
+                <!-- Card 1: Mount Kinabalu -->
+                <div class="card">
+                    <img src="images/mount-kinabalu.jpg" alt="Mount Kinabalu at sunrise">
+                    <div class="card-content">
+                        <h3>Mount Kinabalu</h3>
+                        <p>Scale Southeast Asia's highest peak at 4,095 meters. Experience breathtaking sunrise views from the summit and explore unique alpine ecosystems.</p>
+                        <a href="kinabalu.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Sipadan Island -->
+                <div class="card">
+                    <img src="images/sipadan-island.jpg" alt="Underwater at Sipadan Island">
+                    <div class="card-content">
+                        <h3>Sipadan Island</h3>
+                        <p>Dive into one of the world's top diving destinations. Swim alongside sea turtles, vibrant coral reefs, and diverse marine life.</p>
+                        <a href="sipadan.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Sepilok -->
+                <div class="card">
+                    <img src="images/sepilok-orangutan.jpg" alt="Orangutan at Sepilok">
+                    <div class="card-content">
+                        <h3>Sepilok Orangutan Centre</h3>
+                        <p>Witness the rehabilitation of orphaned orangutans in their natural habitat. A heartwarming wildlife experience like no other.</p>
+                        <a href="sepilok.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Kota Kinabalu -->
+                <div class="card">
+                    <img src="images/kota-kinabalu.jpg" alt="Kota Kinabalu waterfront">
+                    <div class="card-content">
+                        <h3>Kota Kinabalu City</h3>
+                        <p>Explore the vibrant capital city with stunning sunsets, bustling markets, delicious cuisine, and rich cultural heritage.</p>
+                        <a href="kk.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Card 5: Maliau Basin -->
+                <div class="card">
+                    <img src="images/maliau-basin.jpg" alt="Maliau Basin waterfall">
+                    <div class="card-content">
+                        <h3>Maliau Basin</h3>
+                        <p>Venture into Sabah's "Lost World" - a pristine rainforest wilderness with majestic waterfalls and incredible biodiversity.</p>
+                        <a href="maliau.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Card 6: Beaches -->
+                <div class="card">
+                    <img src="images/beach-paradise.jpg" alt="Tropical beach in Sabah">
+                    <div class="card-content">
+                        <h3>Tropical Beaches</h3>
+                        <p>Relax on pristine white-sand beaches with crystal-clear turquoise waters. Island hopping paradise awaits in Tunku Abdul Rahman Park.</p>
+                        <a href="gallery.html" class="btn">View Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section class="highlight-box">
+            <h3>Start Planning Your Trip</h3>
+            <p>Need help planning your Sabah adventure? Check out our comprehensive travel guide or get in touch with us for personalized recommendations.</p>
+            <br>
+            <a href="guide.html" class="btn">Travel Guide</a>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </section>
+
+        <!-- Audio Element -->
+        <section class="media-container">
+            <h3>Sounds of Sabah Rainforest</h3>
+            <p>Listen to the soothing sounds of Borneo's tropical rainforest</p>
+            <br>
+            <audio controls>
+                <source src="audio/rainforest.mp3" type="audio/mpeg">
+                <!-- Fallback message - audio file would need to be provided -->
+                Your browser does not support the audio element. (Note: Add an audio file to the audio folder)
+            </audio>
+        </section>
+
+        <!-- Introduction List -->
+        <section>
+            <h2>Why Visit Sabah?</h2>
+            <ul class="feature-list">
+                <li><strong>Natural Wonders:</strong> From UNESCO World Heritage Sites to pristine marine parks</li>
+                <li><strong>Wildlife Encounters:</strong> See orangutans, pygmy elephants, and proboscis monkeys</li>
+                <li><strong>Cultural Diversity:</strong> Experience 32+ indigenous ethnic groups and their traditions</li>
+                <li><strong>Adventure Activities:</strong> Mountain climbing, diving, jungle trekking, and river cruises</li>
+                <li><strong>Delicious Cuisine:</strong> Savor authentic Malaysian Borneo dishes and fresh seafood</li>
+                <li><strong>Year-Round Destination:</strong> Tropical climate makes anytime a great time to visit</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Discover Sabah</h4>
+                <p>Your gateway to the wonders of Borneo. We provide comprehensive travel information to help you plan the perfect Sabah adventure.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="about.html">About Sabah</a></p>
+                <p><a href="guide.html">Travel Guide</a></p>
+                <p><a href="gallery.html">Photo Gallery</a></p>
+                <p><a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 Jalan Gaya, Kota Kinabalu, Sabah, Malaysia</p>
+                <p>📞 +60 88-XXXXXX</p>
+                <p>✉️ info@discoversabah.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Discover Sabah Tourism. All rights reserved. | Designed for educational purposes</p>
+        </div>
+    </footer>
+</body>
+</html>

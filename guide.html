@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide - Discover Sabah</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .guide-nav {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        .guide-nav h3 {
+            color: #0d5c3f;
+            margin-bottom: 15px;
+        }
+        .guide-nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .guide-nav ul li a {
+            display: block;
+            padding: 8px 15px;
+            background: #f0f8f5;
+            border-radius: 8px;
+            color: #0d5c3f;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .guide-nav ul li a:hover {
+            background: #0d5c3f;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Discover Sabah</h1>
+            <p class="tagline">The Land Below the Wind Awaits You</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Sabah</a></li>
+            <li><a href="kinabalu.html">Mount Kinabalu</a></li>
+            <li><a href="sipadan.html">Sipadan Island</a></li>
+            <li><a href="sepilok.html">Sepilok</a></li>
+            <li><a href="kk.html">Kota Kinabalu</a></li>
+            <li><a href="maliau.html">Maliau Basin</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="guide.html" class="active">Travel Guide</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &raquo; <span>Travel Guide</span>
+        </div>
+
+        <section class="hero-section">
+            <h1>Complete Travel Guide</h1>
+            <p>Everything you need to know to plan an unforgettable trip to Sabah, from when to visit and what to pack to how to get around and where to stay.</p>
+        </section>
+
+        <!-- Quick Navigation -->
+        <div class="guide-nav">
+            <h3>Quick Jump to:</h3>
+            <ul>
+                <li><a href="#best-time">Best Time</a></li>
+                <li><a href="#getting-there">Getting There</a></li>
+                <li><a href="#transport">Transport</a></li>
+                <li><a href="#accommodation">Accommodation</a></li>
+                <li><a href="#packing">Packing List</a></li>
+                <li><a href="#budget">Budget Guide</a></li>
+                <li><a href="#safety">Safety Tips</a></li>
+                <li><a href="#etiquette">Etiquette</a></li>
+            </ul>
+        </div>
+
+        <!-- Best Time to Visit -->
+        <section id="best-time">
+            <h2>Best Time to Visit Sabah</h2>
+            <p>Sabah enjoys a tropical climate with temperatures ranging from 23°C to 33°C year-round. While the state lies outside the typhoon belt, there are distinct wet and dry seasons to consider when planning your trip.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Season</th>
+                        <th>Months</th>
+                        <th>Weather</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>High Season</td>
+                        <td>March - May</td>
+                        <td>Dry, sunny, 25-32°C</td>
+                        <td>Best diving, climbing conditions</td>
+                        <td>Higher prices, more crowds</td>
+                    </tr>
+                    <tr>
+                        <td>Shoulder Season</td>
+                        <td>June - August</td>
+                        <td>Generally dry, occasional rain</td>
+                        <td>Good weather, fewer tourists</td>
+                        <td>Some haze possible</td>
+                    </tr>
+                    <tr>
+                        <td>Low Season</td>
+                        <td>September - February</td>
+                        <td>Wet season, 23-30°C</td>
+                        <td>Lowest prices, lush landscapes</td>
+                        <td>Heavy rain, rough seas</td>
+                    </tr>
+                    <tr>
+                        <td>Festival Season</td>
+                        <td>May, August, December</td>
+                        <td>Variable</td>
+                        <td>Cultural experiences</td>
+                        <td>Need advance booking</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box tip">
+                <div class="info-box-icon">💡</div>
+                <h4>Our Recommendation</h4>
+                <p>The months of <strong>March to May</strong> offer the best overall conditions for most activities. However, diving at Sipadan is excellent year-round, and wildlife viewing at Sepilok is consistent throughout the year.</p>
+            </div>
+        </section>
+
+        <!-- Getting There -->
+        <section id="getting-there">
+            <h2>Getting to Sabah</h2>
+            <div class="feature-box">
+                <img src="images/kota-kinabalu.jpg" alt="Kota Kinabalu International Airport">
+                <h3>By Air</h3>
+                <p>The main gateway to Sabah is <strong>Kota Kinabalu International Airport (BKI)</strong>, Malaysia's second busiest airport. Direct flights connect KK to major Asian cities including Kuala Lumpur, Singapore, Hong Kong, Seoul, Tokyo, Manila, and Taipei.</p>
+                <p>For destinations on Sabah's east coast, such as Sandakan (for Sepilok) and Tawau (for Sipadan), domestic flights operate regularly from KK. AirAsia and Malaysia Airlines provide extensive coverage within Sabah.</p>
+            </div>
+
+            <h3>Visa Requirements</h3>
+            <ul class="feature-list">
+                <li><strong>ASEAN Citizens:</strong> Visa-free entry (up to 30 days for most)</li>
+                <li><strong>EU/US/UK/AU/NZ/JP:</strong> Visa-free entry for 90 days</li>
+                <li><strong>Other Nationalities:</strong> Check with Malaysian embassy for requirements</li>
+                <li><strong>Passport Validity:</strong> Minimum 6 months beyond arrival date</li>
+                <li><strong>Return Ticket:</strong> May be requested at immigration</li>
+            </ul>
+        </section>
+
+        <!-- Transport -->
+        <section id="transport">
+            <h2>Getting Around Sabah</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Transport</th>
+                        <th>Best For</th>
+                        <th>Cost Range (MYR)</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Domestic Flights</td>
+                        <td>Long distances (KK to Sandakan/Tawau)</td>
+                        <td>100 - 400</td>
+                        <td>Fastest option, book early</td>
+                    </tr>
+                    <tr>
+                        <td>Rental Car</td>
+                        <td>Flexible exploration</td>
+                        <td>150 - 350/day</td>
+                        <td>Right-hand drive roads</td>
+                    </tr>
+                    <tr>
+                        <td>Bus/Minivan</td>
+                        <td>Budget travel</td>
+                        <td>20 - 100</td>
+                        <td>Longer travel times</td>
+                    </tr>
+                    <tr>
+                        <td>Taxi/Grab</td>
+                        <td>City transport</td>
+                        <td>10 - 50/trip</td>
+                        <td>Grab app widely used in KK</td>
+                    </tr>
+                    <tr>
+                        <td>Boat/Ferry</td>
+                        <td>Island access</td>
+                        <td>30 - 200</td>
+                        <td>Essential for TARP islands</td>
+                    </tr>
+                    <tr>
+                        <td>Tour Packages</td>
+                        <td>Remote destinations</td>
+                        <td>200 - 1,000+</td>
+                        <td>Includes guide and transport</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Accommodation -->
+        <section id="accommodation">
+            <h2>Where to Stay</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>🏨 Luxury Resorts</h3>
+                        <p>High-end beachfront resorts and jungle lodges with world-class amenities. Expect to pay MYR 500-2,000+ per night.</p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Shangri-La Rasa Ria</li>
+                            <li>Gaya Island Resort</li>
+                            <li>Sutera Harbour Resort</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>🏠 Mid-Range Hotels</h3>
+                        <p>Comfortable hotels and boutique guesthouses with good facilities. Prices range from MYR 150-500 per night.</p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Hyatt Regency Kinabalu</li>
+                            <li>Hotel Sixty3</li>
+                            <li>Nexus Resort Karambunai</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>🏕️ Budget & Hostels</h3>
+                        <p>Backpacker hostels, homestays, and budget hotels. Great value at MYR 30-150 per night.</p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Hostel lodges in KK city center</li>
+                            <li>Homestays in villages</li>
+                            <li>Basic mountain huts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Packing List -->
+        <section id="packing">
+            <h2>What to Pack</h2>
+            <div class="info-box">
+                <div class="info-box-icon">🎒</div>
+                <h4>Essential Packing List</h4>
+                <ul class="feature-list">
+                    <li><strong>Lightweight, breathable clothing</strong> - Cotton and moisture-wicking fabrics</li>
+                    <li><strong>Rain jacket/poncho</strong> - Tropical downpours happen year-round</li>
+                    <li><strong>Comfortable walking shoes</strong> - Plus sandals for beach</li>
+                    <li><strong>Insect repellent (DEET)</strong> - Essential for jungle areas</li>
+                    <li><strong>Sunscreen (SPF 30+)</strong> - Strong tropical sun</li>
+                    <li><strong>Swimwear</strong> - Multiple sets for water activities</li>
+                    <li><strong>Reusable water bottle</strong> - Stay hydrated, reduce plastic</li>
+                    <li><strong>Power adapter</strong> - Malaysia uses UK-style 3-pin plugs (Type G)</li>
+                    <li><strong>Basic first aid kit</strong> - Include anti-diarrheal medication</li>
+                    <li><strong>Universal travel adapter</strong> - 240V, 50Hz electricity</li>
+                </ul>
+            </div>
+
+            <div class="info-box warning">
+                <div class="info-box-icon">⚠</div>
+                <h4>For Mountain Climbers</h4>
+                <p>If climbing Mount Kinabalu, additional gear includes: warm layers (temperatures below freezing at summit), hiking boots with good grip, headlamp with extra batteries, trekking poles, and a small backpack.</p>
+            </div>
+        </section>
+
+        <!-- Budget Guide -->
+        <section id="budget">
+            <h2>Budget Planning</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Expense Category</th>
+                        <th>Budget (MYR)</th>
+                        <th>Mid-Range (MYR)</th>
+                        <th>Luxury (MYR)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Accommodation (per night)</td>
+                        <td>30 - 100</td>
+                        <td>150 - 400</td>
+                        <td>500 - 2,000+</td>
+                    </tr>
+                    <tr>
+                        <td>Meals (per day)</td>
+                        <td>30 - 60</td>
+                        <td>80 - 150</td>
+                        <td>200 - 500</td>
+                    </tr>
+                    <tr>
+                        <td>Local Transport (per day)</td>
+                        <td>20 - 50</td>
+                        <td>60 - 120</td>
+                        <td>150 - 400</td>
+                    </tr>
+                    <tr>
+                        <td>Activities/Attractions</td>
+                        <td>50 - 150</td>
+                        <td>200 - 500</td>
+                        <td>600 - 2,000+</td>
+                    </tr>
+                    <tr>
+                        <td>Daily Total (approx.)</td>
+                        <td>130 - 360</td>
+                        <td>490 - 1,170</td>
+                        <td>1,450 - 4,900+</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box">
+                <h3>Money-Saving Tips</h3>
+                <ul class="feature-list">
+                    <li>Eat at local hawker centers and night markets for authentic, affordable meals</li>
+                    <li>Book accommodation and tours directly with local operators</li>
+                    <li>Travel during shoulder season for better rates</li>
+                    <li>Use Grab instead of taxis for cheaper city transport</li>
+                    <li>Book Mount Kinabalu climbs well in advance to avoid surcharges</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Safety -->
+        <section id="safety">
+            <h2>Safety & Health</h2>
+            <div class="feature-box">
+                <img src="images/sabah-map.jpg" alt="Sabah travel safety" class="right">
+                <h3>Staying Safe in Sabah</h3>
+                <p>Sabah is generally a safe destination for travelers. Violent crime is rare, and locals are famously friendly and welcoming. However, as with any travel destination, it's wise to take standard precautions:</p>
+                <ul class="feature-list">
+                    <li>Keep valuables secure and be aware in crowded areas</li>
+                    <li>Use hotel safes for passports and extra cash</li>
+                    <li>Avoid isolated beaches at night</li>
+                    <li>Follow local advice regarding sea conditions</li>
+                    <li>Register with your embassy if traveling to remote areas</li>
+                    <li>Get comprehensive travel insurance before departure</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <div class="info-box-icon">🏥</div>
+                <h4>Health Precautions</h4>
+                <ul class="feature-list">
+                    <li>No mandatory vaccinations, but Hepatitis A/B, Typhoid, and Tetanus recommended</li>
+                    <li>Malaria is present in remote jungle areas - consult doctor about prophylaxis</li>
+                    <li>Dengue fever is present - use mosquito repellent diligently</li>
+                    <li>Drink only bottled or boiled water</li>
+                    <li>Comprehensive travel insurance with medical evacuation coverage is essential</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Etiquette -->
+        <section id="etiquette">
+            <h2>Cultural Etiquette</h2>
+            <div class="info-box tip">
+                <div class="info-box-icon">🤝</div>
+                <h4>Respecting Local Customs</h4>
+                <ol class="feature-list">
+                    <li><strong>Dress modestly</strong> when visiting religious sites and rural villages</li>
+                    <li><strong>Remove shoes</strong> before entering homes and places of worship</li>
+                    <li><strong>Use right hand</strong> for giving and receiving items (left hand is considered unclean)</li>
+                    <li><strong>Ask permission</strong> before photographing people</li>
+                    <li><strong>Respect elders</strong> - greet them first and offer your seat when appropriate</li>
+                    <li><strong>During Ramadan</strong> - avoid eating, drinking, or smoking in public during fasting hours</li>
+                    <li><strong>Greetings</strong> - a smile and slight nod work universally; "Selamat datang" means welcome</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Quick Reference -->
+        <section>
+            <h2>Emergency Contacts</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Police / General Emergency</td>
+                        <td>999</td>
+                    </tr>
+                    <tr>
+                        <td>Tourist Police</td>
+                        <td>+60 88-450 222</td>
+                    </tr>
+                    <tr>
+                        <td>KK Hospital</td>
+                        <td>+60 88-517 555</td>
+                    </tr>
+                    <tr>
+                        <td>Fire & Rescue</td>
+                        <td>994</td>
+                    </tr>
+                    <tr>
+                        <td>Malaysia Tourism Hotline</td>
+                        <td>1-300-88-5050</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="highlight-box">
+            <h3>Need Personalized Travel Advice?</h3>
+            <p>Our team is ready to help you plan the perfect Sabah adventure tailored to your interests and budget.</p>
+            <br>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Discover Sabah</h4>
+                <p>Your gateway to the wonders of Borneo.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="about.html">About Sabah</a></p>
+                <p><a href="guide.html">Travel Guide</a></p>
+                <p><a href="gallery.html">Photo Gallery</a></p>
+                <p><a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 Jalan Gaya, Kota Kinabalu, Sabah, Malaysia</p>
+                <p>📞 +60 88-XXXXXX</p>
+                <p>✉️ info@discoversabah.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Discover Sabah Tourism. All rights reserved. | Designed for educational purposes</p>
+        </div>
+    </footer>
+</body>
+</html>

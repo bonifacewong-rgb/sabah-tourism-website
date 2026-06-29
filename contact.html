@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Discover Sabah</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, #0d5c3f 0%, #1a8a5f 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .contact-hero h2 {
+            color: #ffd700;
+            border: none;
+            font-size: 2.2em;
+            margin: 0 0 15px 0;
+        }
+        .contact-hero p {
+            color: #e0f0e8;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .contact-form-section {
+            flex: 2;
+            min-width: 300px;
+        }
+        .contact-info-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+            border: 2px solid #4caf50;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .success-message.visible {
+            display: block;
+        }
+        .map-container {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            margin: 20px 0;
+            text-align: center;
+        }
+        .map-placeholder {
+            background: linear-gradient(135deg, #e0f0e8 0%, #c8e6c9 100%);
+            border-radius: 10px;
+            padding: 60px 20px;
+            color: #0d5c3f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Discover Sabah</h1>
+            <p class="tagline">The Land Below the Wind Awaits You</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Sabah</a></li>
+            <li><a href="kinabalu.html">Mount Kinabalu</a></li>
+            <li><a href="sipadan.html">Sipadan Island</a></li>
+            <li><a href="sepilok.html">Sepilok</a></li>
+            <li><a href="kk.html">Kota Kinabalu</a></li>
+            <li><a href="maliau.html">Maliau Basin</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="guide.html">Travel Guide</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &raquo; <span>Contact Us</span>
+        </div>
+
+        <section class="contact-hero">
+            <h2>Get in Touch</h2>
+            <p>Have questions about visiting Sabah? Need help planning your trip? Our team is here to assist you. Fill out the form below or contact us directly using the information provided.</p>
+        </section>
+
+        <!-- Contact Grid: Form + Info -->
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <div class="form-container">
+                    <h2>Send Us a Message</h2>
+                    <p style="text-align: center; margin-bottom: 25px;">We aim to respond within 24 hours</p>
+
+                    <div class="success-message" id="successMessage">
+                        <h3 style="color: #2e7d32; margin-bottom: 10px;">✓ Message Sent Successfully!</h3>
+                        <p>Thank you for contacting us. We will get back to you within 24 hours.</p>
+                    </div>
+
+                    <form id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name">
+                                <div class="error-message" id="firstNameError">Please enter your first name (at least 2 characters).</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name">
+                                <div class="error-message" id="lastNameError">Please enter your last name (at least 2 characters).</div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                                <div class="error-message" id="emailError">Please enter a valid email address.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+60 1X-XXXX XXXX">
+                                <div class="error-message" id="phoneError">Please enter a valid phone number (at least 10 digits).</div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject">
+                                    <option value="">-- Select a subject --</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="booking">Tour Booking</option>
+                                    <option value="kinabalu">Mount Kinabalu Climb</option>
+                                    <option value="diving">Diving at Sipadan</option>
+                                    <option value="wildlife">Wildlife Tours</option>
+                                    <option value="custom">Custom Itinerary</option>
+                                    <option value="feedback">Feedback</option>
+                                </select>
+                                <div class="error-message" id="subjectError">Please select a subject.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="travelDate">Preferred Travel Date</label>
+                                <input type="date" id="travelDate" name="travelDate">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your travel plans, questions, or requirements..."></textarea>
+                            <div class="error-message" id="messageError">Please enter your message (at least 10 characters).</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                Subscribe to our newsletter for travel tips and exclusive offers
+                            </label>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <button type="submit" class="btn-submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info-section">
+                <div class="contact-info">
+                    <h3 style="color: #0d5c3f; margin-bottom: 20px; text-align: center;">Contact Information</h3>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Address</strong><br>
+                            Discover Sabah Tourism<br>
+                            Lot 15, Jalan Gaya,<br>
+                            88000 Kota Kinabalu,<br>
+                            Sabah, Malaysia
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Phone</strong><br>
+                            +60 88-250 000<br>
+                            +60 16-800 1234 (Mobile)
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:info@discoversabah.com">info@discoversabah.com</a><br>
+                            <a href="mailto:bookings@discoversabah.com">bookings@discoversabah.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">🕐</div>
+                        <div>
+                            <strong>Business Hours</strong><br>
+                            Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Saturday: 9:00 AM - 1:00 PM<br>
+                            Sunday: Closed
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">🌐</div>
+                        <div>
+                            <strong>Social Media</strong><br>
+                            Facebook: /DiscoverSabah<br>
+                            Instagram: @DiscoverSabah<br>
+                            Twitter: @DiscoverSabahMY
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Contact Links -->
+                <div class="info-box tip" style="margin-top: 20px;">
+                    <div class="info-box-icon">💡</div>
+                    <h4>Quick Contact Options</h4>
+                    <ul class="feature-list">
+                        <li>For urgent inquiries: Call our mobile hotline</li>
+                        <li>For booking: Email bookings@discoversabah.com</li>
+                        <li>For feedback: Use the form with subject "Feedback"</li>
+                        <li>Response time: Within 24 hours</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <section class="map-container">
+            <h2>Our Location</h2>
+            <p>Find us in the heart of Kota Kinabalu city</p>
+            <br>
+            <div class="map-placeholder">
+                <h3>🗺️ Interactive Map</h3>
+                <p>Discover Sabah Tourism Office</p>
+                <p>Lot 15, Jalan Gaya, Kota Kinabalu, 88000 Sabah</p>
+                <br>
+                <p><em>Note: In a live website, this would contain an embedded Google Map</em></p>
+                <p><em>Use: &lt;iframe&gt; with Google Maps embed URL</em></p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section>
+            <h2>Frequently Asked Questions</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>How far in advance should I book?</h3>
+                        <p>We recommend booking at least 3-6 months in advance, especially for Mount Kinabalu climbs and Sipadan diving permits which have limited availability.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Do you offer customized tours?</h3>
+                        <p>Yes! We specialize in creating personalized itineraries based on your interests, budget, and travel dates. Contact us with your requirements.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>What payment methods do you accept?</h3>
+                        <p>We accept bank transfers, credit cards (Visa, MasterCard), PayPal, and cash payments at our office in Kota Kinabalu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Discover Sabah</h4>
+                <p>Your gateway to the wonders of Borneo.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="about.html">About Sabah</a></p>
+                <p><a href="guide.html">Travel Guide</a></p>
+                <p><a href="gallery.html">Photo Gallery</a></p>
+                <p><a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 Jalan Gaya, Kota Kinabalu, Sabah, Malaysia</p>
+                <p>📞 +60 88-XXXXXX</p>
+                <p>✉️ info@discoversabah.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Discover Sabah Tourism. All rights reserved. | Designed for educational purposes</p>
+        </div>
+    </footer>
+
+    <!-- Form Validation JavaScript -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            // Reset errors
+            document.querySelectorAll('.error-message').forEach(el => el.classList.remove('visible'));
+            document.querySelectorAll('input, select, textarea').forEach(el => el.classList.remove('error'));
+            document.getElementById('successMessage').classList.remove('visible');
+            
+            // First Name validation
+            const firstName = document.getElementById('firstName');
+            if (firstName.value.trim().length < 2) {
+                document.getElementById('firstNameError').classList.add('visible');
+                firstName.classList.add('error');
+                isValid = false;
+            }
+            
+            // Last Name validation
+            const lastName = document.getElementById('lastName');
+            if (lastName.value.trim().length < 2) {
+                document.getElementById('lastNameError').classList.add('visible');
+                lastName.classList.add('error');
+                isValid = false;
+            }
+            
+            // Email validation
+            const email = document.getElementById('email');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email.value.trim())) {
+                document.getElementById('emailError').classList.add('visible');
+                email.classList.add('error');
+                isValid = false;
+            }
+            
+            // Phone validation
+            const phone = document.getElementById('phone');
+            const phoneDigits = phone.value.replace(/\D/g, '');
+            if (phoneDigits.length < 10) {
+                document.getElementById('phoneError').classList.add('visible');
+                phone.classList.add('error');
+                isValid = false;
+            }
+            
+            // Subject validation
+            const subject = document.getElementById('subject');
+            if (subject.value === '') {
+                document.getElementById('subjectError').classList.add('visible');
+                subject.classList.add('error');
+                isValid = false;
+            }
+            
+            // Message validation
+            const message = document.getElementById('message');
+            if (message.value.trim().length < 10) {
+                document.getElementById('messageError').classList.add('visible');
+                message.classList.add('error');
+                isValid = false;
+            }
+            
+            // If valid, show success message
+            if (isValid) {
+                document.getElementById('successMessage').classList.add('visible');
+                document.getElementById('contactForm').reset();
+                // Scroll to success message
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+        
+        // Real-time validation on input
+        document.querySelectorAll('#contactForm input, #contactForm select, #contactForm textarea').forEach(field => {
+            field.addEventListener('input', function() {
+                this.classList.remove('error');
+                const errorMsg = document.getElementById(this.id + 'Error');
+                if (errorMsg) {
+                    errorMsg.classList.remove('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

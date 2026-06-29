@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Discover Sabah</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery-filter {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .filter-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            margin: 5px;
+            background: #0d5c3f;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: #e8a838;
+            color: #333;
+        }
+        .gallery-section-title {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            color: #0d5c3f;
+            font-size: 1.8em;
+            border-bottom: 3px solid #e8a838;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Discover Sabah</h1>
+            <p class="tagline">The Land Below the Wind Awaits You</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Sabah</a></li>
+            <li><a href="kinabalu.html">Mount Kinabalu</a></li>
+            <li><a href="sipadan.html">Sipadan Island</a></li>
+            <li><a href="sepilok.html">Sepilok</a></li>
+            <li><a href="kk.html">Kota Kinabalu</a></li>
+            <li><a href="maliau.html">Maliau Basin</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="guide.html">Travel Guide</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &raquo; <span>Photo Gallery</span>
+        </div>
+
+        <section class="hero-section">
+            <h1>Sabah Photo Gallery</h1>
+            <p>Explore the breathtaking beauty of Sabah through our curated collection of photographs showcasing destinations, wildlife, culture, and cuisine.</p>
+        </section>
+
+        <!-- Destinations Gallery -->
+        <h2 class="gallery-section-title">🏔️ Iconic Destinations</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/mount-kinabalu.jpg" alt="Mount Kinabalu at sunrise">
+                <div class="gallery-caption">Mount Kinabalu - Southeast Asia's highest peak</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sipadan-island.jpg" alt="Sipadan Island underwater">
+                <div class="gallery-caption">Sipadan Island - World-class diving destination</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sepilok-orangutan.jpg" alt="Orangutan at Sepilok">
+                <div class="gallery-caption">Sepilok - Home to rescued orangutans</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/kota-kinabalu.jpg" alt="Kota Kinabalu waterfront">
+                <div class="gallery-caption">Kota Kinabalu - Vibrant coastal capital</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/maliau-basin.jpg" alt="Maliau Basin waterfall">
+                <div class="gallery-caption">Maliau Basin - Sabah's Lost World</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/hero-sabah.jpg" alt="Sabah Borneo tourism collage">
+                <div class="gallery-caption">Welcome to Sabah - Land of wonders</div>
+            </div>
+        </div>
+
+        <!-- Beaches & Nature Gallery -->
+        <h2 class="gallery-section-title">🏖️ Beaches & Natural Beauty</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/beach-paradise.jpg" alt="Tropical beach in Sabah">
+                <div class="gallery-caption">Pristine tropical beaches</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/mount-kinabalu.jpg" alt="Mountain landscape">
+                <div class="gallery-caption">Majestic mountain scenery</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/maliau-basin.jpg" alt="Rainforest waterfall">
+                <div class="gallery-caption">Lush rainforest waterfalls</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sipadan-island.jpg" alt="Crystal clear ocean">
+                <div class="gallery-caption">Crystal clear waters</div>
+            </div>
+        </div>
+
+        <!-- Culture & Wildlife Gallery -->
+        <h2 class="gallery-section-title">🎭 Culture & Wildlife</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/cultural-heritage.jpg" alt="Traditional Sabah longhouse">
+                <div class="gallery-caption">Traditional longhouse and cultural heritage</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/wildlife.jpg" alt="Proboscis monkeys in mangroves">
+                <div class="gallery-caption">Proboscis monkeys - endemic to Borneo</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sepilok-orangutan.jpg" alt="Baby orangutan">
+                <div class="gallery-caption">Baby orangutan in the rainforest</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/local-cuisine.jpg" alt="Sabah street food">
+                <div class="gallery-caption">Vibrant night markets and street food</div>
+            </div>
+        </div>
+
+        <!-- Sabah Map -->
+        <h2 class="gallery-section-title">🗺️ Sabah Travel Map</h2>
+        <div class="media-container">
+            <img src="images/sabah-map.jpg" alt="Sabah Borneo tourist map" style="max-width: 100%; border-radius: 12px;">
+            <p style="margin-top: 15px;">Interactive map showing key tourist destinations across Sabah</p>
+        </div>
+
+        <!-- Video Gallery -->
+        <h2 class="gallery-section-title">🎬 Video Highlights</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="media-container" style="margin: 0;">
+                    <video controls poster="images/hero-sabah.jpg" style="width: 100%; max-width: 100%;">
+                        <source src="videos/sabah-intro.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                </div>
+                <div class="card-content">
+                    <h3>Welcome to Sabah</h3>
+                    <p>An introduction to the wonders of Sabah, Borneo.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="media-container" style="margin: 0;">
+                    <video controls poster="images/mount-kinabalu.jpg" style="width: 100%; max-width: 100%;">
+                        <source src="videos/kinabalu.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                </div>
+                <div class="card-content">
+                    <h3>Mount Kinabalu Experience</h3>
+                    <p>The journey to Borneo's rooftop.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="media-container" style="margin: 0;">
+                    <video controls poster="images/sipadan-island.jpg" style="width: 100%; max-width: 100%;">
+                        <source src="videos/sipadan.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                </div>
+                <div class="card-content">
+                    <h3>Sipadan Underwater World</h3>
+                    <p>Diving at one of the world's best dive sites.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audio Section -->
+        <h2 class="gallery-section-title">🎵 Sounds of Sabah</h2>
+        <div class="media-container">
+            <p><strong>Sabah Rainforest Ambience</strong> - Immerse yourself in the sounds of Borneo's jungle</p>
+            <br>
+            <audio controls>
+                <source src="audio/rainforest.mp3" type="audio/mpeg">
+                Your browser does not support the audio element. (Note: Add an audio file to the audio folder)
+            </audio>
+        </div>
+
+        <section class="highlight-box">
+            <h3>Want to See More?</h3>
+            <p>Contact us to arrange your own Sabah photography adventure!</p>
+            <br>
+            <a href="contact.html" class="btn">Plan Your Trip</a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Discover Sabah</h4>
+                <p>Your gateway to the wonders of Borneo.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="about.html">About Sabah</a></p>
+                <p><a href="guide.html">Travel Guide</a></p>
+                <p><a href="gallery.html">Photo Gallery</a></p>
+                <p><a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 Jalan Gaya, Kota Kinabalu, Sabah, Malaysia</p>
+                <p>📞 +60 88-XXXXXX</p>
+                <p>✉️ info@discoversabah.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Discover Sabah Tourism. All rights reserved. | Designed for educational purposes</p>
+        </div>
+    </footer>
+</body>
+</html>

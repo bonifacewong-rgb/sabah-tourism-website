@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Discover Sabah</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* --- Embedded CSS for Destinations Page --- */
+
+        /* Destination Navigation Tabs */
+        .dest-nav {
+            background: linear-gradient(90deg, #0a4a32 0%, #0d5c3f 50%, #0a4a32 100%);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        .dest-nav ul {
+            list-style: none;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .dest-nav ul li a {
+            display: block;
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .dest-nav ul li a:hover {
+            background-color: rgba(255,255,255,0.15);
+            color: #ffd700;
+            border-bottom-color: #ffd700;
+            text-decoration: none;
+        }
+
+        /* Destination Section Styling */
+        .destination-section {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px dashed #d0e0d8;
+        }
+
+        .destination-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .destination-section .destination-header {
+            margin-top: 20px;
+        }
+
+        /* Quick Facts Box - Floating Right */
+        .quick-facts {
+            float: right;
+            width: 280px;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 0 0 20px 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid #e0e8e5;
+        }
+
+        .quick-facts h4 {
+            color: #0d5c3f;
+            border-bottom: 2px solid #e8a838;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .quick-facts ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .quick-facts ul li {
+            padding: 6px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.9em;
+        }
+
+        .quick-facts ul li:last-child {
+            border-bottom: none;
+        }
+
+        .quick-facts ul li strong {
+            color: #1a7a5a;
+        }
+
+        /* Compact Table Styling */
+        .compact-table {
+            font-size: 0.9em;
+        }
+
+        .compact-table th,
+        .compact-table td {
+            padding: 10px 14px;
+        }
+
+        /* Anchor offset for sticky nav */
+        .dest-anchor {
+            display: block;
+            position: relative;
+            top: -50px;
+            visibility: hidden;
+        }
+
+        /* Two Column Layout for smaller sections */
+        .two-col {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .two-col > div {
+            flex: 1 1 45%;
+            min-width: 280px;
+        }
+
+        /* Media Container */
+        .media-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .media-container video,
+        .media-container audio {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Discover Sabah</h1>
+            <p class="tagline">The Land Below the Wind Awaits You</p>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Sabah</a></li>
+            <li><a href="destination.html" class="active">Destinations</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="guide.html">Travel Guide</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="kinabalu.html">Mount Kinabalu</a></li>
+            <li><a href="sipadan.html">Sipadan Island</a></li>
+            <li><a href="sepilok.html">Sepilok</a></li>
+            <li><a href="kk.html">Kota Kinabalu</a></li>
+            <li><a href="maliau.html">Maliau Basin</a></li>
+        </ul>
+    </nav>
+
+    <!-- Destination Sub-Navigation -->
+    <nav class="dest-nav">
+        <ul>
+            <li><a href="#kinabalu">Mount Kinabalu</a></li>
+            <li><a href="#sipadan">Sipadan Island</a></li>
+            <li><a href="#sepilok">Sepilok</a></li>
+            <li><a href="#kotakinabalu">Kota Kinabalu</a></li>
+            <li><a href="#maliau">Maliau Basin</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &raquo; <span>Destinations</span>
+        </div>
+
+        <!-- Page Introduction -->
+        <section class="hero-section">
+            <h1>Explore Sabah's Top Destinations</h1>
+            <p>From towering mountains and pristine islands to ancient rainforests and vibrant cities, discover the diverse wonders that make Sabah one of Southeast Asia's most captivating destinations.</p>
+            <a href="#kinabalu" class="btn">Start Exploring</a>
+        </section>
+
+        <!-- ==================== MOUNT KINABALU ==================== -->
+        <span class="dest-anchor" id="kinabalu"></span>
+        <div class="destination-section">
+            <div class="destination-header" style="background-image: url('images/kinabalu1.jpeg');">
+                <h1>Mount Kinabalu</h1>
+            </div>
+
+            <section>
+                <h2>Conquer Southeast Asia's Highest Peak</h2>
+
+                <div class="quick-facts">
+                    <h4>Quick Facts</h4>
+                    <ul>
+                        <li><strong>Height:</strong> 4,095m (13,435 ft)</li>
+                        <li><strong>Location:</strong> Kinabalu Park, Ranau</li>
+                        <li><strong>Status:</strong> UNESCO World Heritage</li>
+                        <li><strong>Difficulty:</strong> Moderate to Challenging</li>
+                        <li><strong>Duration:</strong> 2 days, 1 night</li>
+                        <li><strong>Best Time:</strong> March - August</li>
+                        <li><strong>Permit:</strong> Required (book in advance)</li>
+                    </ul>
+                </div>
+
+                <p>Standing majestically at <strong>4,095 meters (13,435 feet)</strong> above sea level, Mount Kinabalu is not only the highest mountain in Malaysia but also one of the highest peaks in Southeast Asia. This UNESCO World Heritage Site is the crown jewel of Kinabalu Park and a bucket-list destination for trekkers and nature enthusiasts from around the world.</p>
+
+                <div class="feature-box" style="clear: both;">
+                    <img src="images/kinabalu2.jpeg" alt="Mount Kinabalu landscape">
+                    <h3>A Mountain of Legends</h3>
+                    <p>The name "Kinabalu" is believed to come from the Kadazan-Dusun words "Aki Nabalu," meaning "the revered place of the dead." The mountain holds deep spiritual significance for local indigenous communities, who believe it is the resting place of their ancestors' spirits.</p>
+                    <p>Beyond its cultural importance, Mount Kinabalu is a geological wonder. Formed approximately 10 million years ago, the mountain continues to rise at a rate of about 5mm per year. Its dramatic granite peak creates a stunning silhouette against the Borneo sky.</p>
+                </div>
+
+                <h3>What Makes Kinabalu Special</h3>
+                <ul class="feature-list">
+                    <li><strong>UNESCO World Heritage Status:</strong> Recognized in 2000 for its outstanding universal value</li>
+                    <li><strong>Incredible Biodiversity:</strong> Home to over 5,000 plant species, including 1,400 orchid varieties</li>
+                    <li><strong>Unique Alpine Zone:</strong> Experience four distinct climate zones on a single climb</li>
+                    <li><strong>Sunrise from the Summit:</strong> Watch dawn break from Low's Peak, the highest point</li>
+                    <li><strong>Via Ferrata Routes:</strong> Optional protected climbing routes for adventure seekers</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Climbing Information</h2>
+                <table class="compact-table">
+                    <thead>
+                        <tr>
+                            <th>Detail</th>
+                            <th>Information</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Trail Distance</td>
+                            <td>8.72 km one way to summit</td>
+                        </tr>
+                        <tr>
+                            <td>Duration</td>
+                            <td>2 days, 1 night (standard)</td>
+                        </tr>
+                        <tr>
+                            <td>Difficulty Level</td>
+                            <td>Moderate to challenging</td>
+                        </tr>
+                        <tr>
+                            <td>Best Time to Climb</td>
+                            <td>March to August (dry season)</td>
+                        </tr>
+                        <tr>
+                            <td>Permit Required</td>
+                            <td>Yes (book in advance, limited daily slots)</td>
+                        </tr>
+                        <tr>
+                            <td>Guide Required</td>
+                            <td>Yes, mandatory mountain guide</td>
+                        </tr>
+                        <tr>
+                            <td>Minimum Age</td>
+                            <td>10 years old</td>
+                        </tr>
+                        <tr>
+                            <td>Accommodation</td>
+                            <td>Panalaban Base Camp (3,272m)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box tip">
+                    <div class="info-box-icon">&#128161;</div>
+                    <h4>Essential Tips</h4>
+                    <ul class="feature-list">
+                        <li>Book your climbing permit at least 3-6 months in advance</li>
+                        <li>Acclimatize for a day at Kinabalu Park HQ before climbing</li>
+                        <li>Pack warm layers - temperatures at the summit can drop below freezing</li>
+                        <li>Wear proper trekking shoes with good grip</li>
+                        <li>Bring a headlamp for the pre-dawn summit push</li>
+                        <li>Stay hydrated and pace yourself throughout the climb</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="media-container">
+                <h3>Experience the Climb</h3>
+                <p>Watch this inspiring video of the Mount Kinabalu summit experience</p>
+                <br>
+                <video controls poster="images/kinabalupark.png" style="max-width: 100%; border-radius: 10px;">
+                    <source src="videos/Kinabalu Park (Malaysia).mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+            </section>
+        </div>
+
+        <!-- ==================== SIPADAN ISLAND ==================== -->
+        <span class="dest-anchor" id="sipadan"></span>
+        <div class="destination-section">
+            <div class="destination-header" style="background-image: url('images/sipadan-island.jpg');">
+                <h1>Sipadan Island</h1>
+            </div>
+
+            <section>
+                <h2>A Diver's Paradise</h2>
+
+                <div class="quick-facts">
+                    <h4>Quick Facts</h4>
+                    <ul>
+                        <li><strong>Location:</strong> Celebes Sea, off Semporna</li>
+                        <li><strong>Type:</strong> Oceanic island on extinct volcano</li>
+                        <li><strong>Wall Depth:</strong> 600 meters</li>
+                        <li><strong>Daily Permits:</strong> 120 (limited)</li>
+                        <li><strong>Best Time:</strong> April - October</li>
+                        <li><strong>Skill Level:</strong> Open Water minimum</li>
+                        <li><strong>Famous For:</strong> Turtles, barracuda, wall diving</li>
+                    </ul>
+                </div>
+
+                <p>Sipadan Island is consistently ranked among the <strong>top diving destinations in the world</strong>. This stunning oceanic island, formed by living coral growing on the rim of an extinct volcanic cone, rises 600 meters from the seabed of the Celebes Sea. Located off the east coast of Sabah, Sipadan offers what many describe as the best scuba diving experience on Earth.</p>
+
+                <div class="feature-box" style="clear: both;">
+                    <img src="images/sipadan-island.jpg" alt="Sipadan Island underwater diving">
+                    <h3>An Underwater Wonderland</h3>
+                    <p>The waters surrounding Sipadan are teeming with marine life. Divers regularly encounter large schools of barracuda swirling in tornado-like formations, gentle sea turtles gliding through the water, white-tip reef sharks patrolling the walls, and vibrant coral gardens that stretch as far as the eye can see.</p>
+                    <p>The island was made famous by Jacques Cousteau, who declared it "an untouched piece of art" during his 1989 expedition. Today, it remains a protected marine sanctuary where the underwater ecosystem thrives in its natural state.</p>
+                </div>
+
+                <h3>Why Dive Sipadan</h3>
+                <ul class="feature-list">
+                    <li><strong>Legendary Wall Diving:</strong> Dramatic drop-offs to 600 meters with spectacular visibility</li>
+                    <li><strong>Sea Turtle Encounters:</strong> Home to large populations of green and hawksbill turtles</li>
+                    <li><strong>Barracuda Point:</strong> Witness thousands of barracuda in mesmerizing formations</li>
+                    <li><strong>Coral Garden:</strong> Pristine coral reefs with over 3,000 species of fish</li>
+                    <li><strong>Shark Sightings:</strong> Regular encounters with white-tip and hammerhead sharks</li>
+                    <li><strong>Marine Protection:</strong> A protected sanctuary with limited daily permits</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Top Dive Sites Around Sipadan</h2>
+                <table class="compact-table">
+                    <thead>
+                        <tr>
+                            <th>Dive Site</th>
+                            <th>Depth Range</th>
+                            <th>Highlights</th>
+                            <th>Skill Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Barracuda Point</td>
+                            <td>10m - 40m</td>
+                            <td>Massive barracuda tornadoes, reef sharks</td>
+                            <td>Intermediate</td>
+                        </tr>
+                        <tr>
+                            <td>Turtle Cavern</td>
+                            <td>18m - 30m</td>
+                            <td>Underwater cave system, many turtles</td>
+                            <td>Advanced</td>
+                        </tr>
+                        <tr>
+                            <td>South Point</td>
+                            <td>15m - 50m</td>
+                            <td>Hammerhead sharks (seasonal), pelagic fish</td>
+                            <td>Advanced</td>
+                        </tr>
+                        <tr>
+                            <td>Coral Garden</td>
+                            <td>5m - 25m</td>
+                            <td>Pristine corals, macro photography</td>
+                            <td>Beginner</td>
+                        </tr>
+                        <tr>
+                            <td>Hanging Gardens</td>
+                            <td>10m - 35m</td>
+                            <td>Colorful soft corals, turtle cleaning station</td>
+                            <td>Intermediate</td>
+                        </tr>
+                        <tr>
+                            <td>Mid Reef</td>
+                            <td>8m - 20m</td>
+                            <td>Gentle drift dive, abundant fish life</td>
+                            <td>Beginner</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <div class="info-box-icon">&#128034;</div>
+                    <h4>Conservation Note</h4>
+                    <p>Sipadan was declared a protected area in 2002. All resorts were moved to nearby islands (Mabul and Kapalai), and only 120 diving permits are issued daily to minimize environmental impact. Advance booking is essential!</p>
+                </div>
+
+                <div class="info-box tip">
+                    <div class="info-box-icon">&#128161;</div>
+                    <h4>Planning Your Dive Trip</h4>
+                    <ol class="feature-list">
+                        <li>Book your Sipadan permit well in advance (limited to 120/day)</li>
+                        <li>Stay on Mabul Island or Kapalai for the best access</li>
+                        <li>Best diving conditions from April to October</li>
+                        <li>Minimum certification: Open Water (Advanced recommended)</li>
+                        <li>Bring an underwater camera - the photo opportunities are incredible</li>
+                        <li>Respect marine life - no touching coral or chasing animals</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="media-container">
+                <h3>Underwater Sipadan</h3>
+                <p>Experience the magic of Sipadan's underwater world</p>
+                <br>
+                <video controls poster="images/sipadan-island.jpg" style="max-width: 100%; border-radius: 10px;">
+                    <source src="videos/sipadan.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+            </section>
+        </div>
+
+        <!-- ==================== SEPILOK ==================== -->
+        <span class="dest-anchor" id="sepilok"></span>
+        <div class="destination-section">
+            <div class="destination-header" style="background-image: url('images/sepilok-orangutan.jpg');">
+                <h1>Sepilok Orangutan Centre</h1>
+            </div>
+
+            <section>
+                <h2>Meet the "Old Man of the Forest"</h2>
+
+                <div class="quick-facts">
+                    <h4>Quick Facts</h4>
+                    <ul>
+                        <li><strong>Location:</strong> Kabili-Sepilok Forest Reserve</li>
+                        <li><strong>Established:</strong> 1964</li>
+                        <li><strong>Area:</strong> 43 sq km reserve</li>
+                        <li><strong>Population:</strong> 60-80 wild orangutans</li>
+                        <li><strong>Feeding Times:</strong> 10:00 AM &amp; 3:00 PM</li>
+                        <li><strong>Entry Fee:</strong> MYR 30 (adult)</li>
+                        <li><strong>Status:</strong> Critically Endangered species</li>
+                    </ul>
+                </div>
+
+                <p>The <strong>Sepilok Orangutan Rehabilitation Centre</strong> is one of the most inspiring wildlife sanctuaries in the world. Founded in 1964, this 43-square-kilometer reserve is dedicated to rehabilitating orphaned, injured, and displaced orangutans, with the ultimate goal of returning them to the wild. Located about 25 kilometers west of Sandakan, it offers visitors a rare opportunity to observe these magnificent great apes up close in their natural rainforest habitat.</p>
+
+                <div class="feature-box" style="clear: both;">
+                    <img src="images/sepilok-orangutan.jpg" alt="Orangutan at Sepilok">
+                    <h3>A Legacy of Conservation</h3>
+                    <p>For over 60 years, Sepilok has been at the forefront of orangutan conservation. The centre rehabilitates young orphaned orangutans who have been rescued from logging sites, plantations, or illegal captivity. Here, they learn essential survival skills - from climbing and foraging to building nests - from older orangutans and dedicated caretakers.</p>
+                    <p>The centre covers 10 square kilometers of protected land at the edge of the Kabili-Sepilok Forest Reserve. Over 60-80 orangutans currently live independently within the reserve, with many more having been successfully released back into the wild over the decades.</p>
+                </div>
+
+                <h3>Visitor Experience</h3>
+                <ul class="feature-list">
+                    <li><strong>Feeding Platforms:</strong> Watch orangutans arrive for supplementary feeding twice daily</li>
+                    <li><strong>Nursery Viewing:</strong> Observe young orangutans learning essential skills in the outdoor nursery</li>
+                    <li><strong>Boardwalk Trails:</strong> Explore the rainforest via elevated boardwalks through the canopy</li>
+                    <li><strong>Educational Exhibits:</strong> Learn about orangutan behavior, biology, and conservation efforts</li>
+                    <li><strong>Nocturnal Walks:</strong> Spot wildlife during guided night walks in the reserve</li>
+                    <li><strong>Bornean Sun Bear Centre:</strong> Visit the adjacent conservation centre for sun bears</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Visiting Information</h2>
+                <table class="compact-table">
+                    <thead>
+                        <tr>
+                            <th>Detail</th>
+                            <th>Information</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Location</td>
+                            <td>Kabili-Sepilok Forest Reserve, Sandakan</td>
+                        </tr>
+                        <tr>
+                            <td>Opening Hours</td>
+                            <td>9:00 AM - 12:00 PM, 2:00 PM - 4:00 PM (daily)</td>
+                        </tr>
+                        <tr>
+                            <td>Feeding Times</td>
+                            <td>10:00 AM and 3:00 PM daily</td>
+                        </tr>
+                        <tr>
+                            <td>Best Time to Visit</td>
+                            <td>March to October (drier season)</td>
+                        </tr>
+                        <tr>
+                            <td>Entrance Fee</td>
+                            <td>MYR 30 (adult), MYR 15 (child), MYR 10 (camera)</td>
+                        </tr>
+                        <tr>
+                            <td>Distance from Sandakan</td>
+                            <td>Approximately 25 km (30-minute drive)</td>
+                        </tr>
+                        <tr>
+                            <td>Accessibility</td>
+                            <td>Wheelchair-friendly boardwalks available</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box warning">
+                    <div class="info-box-icon">&#9888;</div>
+                    <h4>Conservation Status</h4>
+                    <p>Bornean orangutans are classified as <strong>Critically Endangered</strong> by the IUCN. Their population has declined by over 80% in the past 75 years due to habitat loss from deforestation and palm oil plantations. Sepilok's work is more important than ever in ensuring the survival of this species.</p>
+                </div>
+
+                <div class="info-box tip">
+                    <div class="info-box-icon">&#128203;</div>
+                    <h4>Visitor Guidelines</h4>
+                    <ol class="feature-list">
+                        <li>Keep a minimum distance of 5 meters from orangutans at all times</li>
+                        <li>Do not touch, feed, or attempt to interact with the orangutans</li>
+                        <li>No flash photography - it disturbs the animals</li>
+                        <li>Stay on designated boardwalks and paths</li>
+                        <li>Do not bring food or drinks into the reserve</li>
+                        <li>Cover up - wear long sleeves and use mosquito repellent</li>
+                        <li>Stay quiet during observations to avoid startling the animals</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="media-container">
+                <h3>Sounds of the Rainforest</h3>
+                <p>Listen to the calls of the wild in Sepilok's ancient forest</p>
+                <br>
+                <audio controls>
+                    <source src="audio/videoplayback.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </section>
+        </div>
+
+        <!-- ==================== KOTA KINABALU ==================== -->
+        <span class="dest-anchor" id="kotakinabalu"></span>
+        <div class="destination-section">
+            <div class="destination-header" style="background-image: url('images/kk1.jpeg');">
+                <h1>Kota Kinabalu City</h1>
+            </div>
+
+            <section>
+                <h2>Gateway to Sabah's Adventures</h2>
+
+                <div class="quick-facts">
+                    <h4>Quick Facts</h4>
+                    <ul>
+                        <li><strong>Population:</strong> 450,000+ residents</li>
+                        <li><strong>Location:</strong> West coast of Sabah</li>
+                        <li><strong>Airport:</strong> Kota Kinabalu International</li>
+                        <li><strong>Known For:</strong> Sunsets, markets, cuisine</li>
+                        <li><strong>Islands:</strong> TARP Marine Park (5 islands)</li>
+                        <li><strong>Best Time:</strong> Year-round destination</li>
+                        <li><strong>Culture:</strong> 32+ ethnic groups</li>
+                    </ul>
+                </div>
+
+                <p><strong>Kota Kinabalu (KK)</strong> is the vibrant capital city of Sabah and the main entry point for travelers exploring Malaysian Borneo. Nestled between the South China Sea and the towering Mount Kinabalu, this cosmopolitan city blends modern development with rich cultural heritage. With its stunning sunsets, bustling markets, diverse cuisine, and friendly locals, KK offers a perfect blend of urban excitement and natural beauty.</p>
+
+                <div class="feature-box" style="clear: both;">
+                    <img src="images/kk2.jpeg" alt="Kota Kinabalu waterfront">
+                    <h3>A City of Contrasts</h3>
+                    <p>Despite being a relatively young city (rebuilt after World War II), Kota Kinabalu has grown into a thriving metropolis. The city's waterfront comes alive each evening as locals and tourists gather to watch spectacular sunsets paint the sky in shades of gold, orange, and purple over the Tunku Abdul Rahman Marine Park islands.</p>
+                    <p>From modern shopping malls and international restaurants to traditional night markets and historic landmarks, KK caters to every type of traveler. The city's compact size makes it easy to explore.</p>
+                </div>
+
+                <h3>Top Attractions</h3>
+                <ul class="feature-list">
+                    <li><strong>Jesselton Point:</strong> Waterfront promenade with stunning island views and ferry services</li>
+                    <li><strong>Gaya Street Sunday Market:</strong> Vibrant weekend market selling everything from local crafts to pets</li>
+                    <li><strong>Signal Hill Observatory:</strong> Panoramic city views from the highest point in KK</li>
+                    <li><strong>Sabah State Mosque:</strong> Beautiful contemporary Islamic architecture with golden dome</li>
+                    <li><strong>Atkinson Clock Tower:</strong> KK's oldest standing structure, built in 1905</li>
+                    <li><strong>Mari Mari Cultural Village:</strong> Experience the traditions of Sabah's indigenous tribes</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>City Attractions Guide</h2>
+                <table class="compact-table">
+                    <thead>
+                        <tr>
+                            <th>Attraction</th>
+                            <th>Type</th>
+                            <th>Location</th>
+                            <th>Best Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tanjung Aru Beach</td>
+                            <td>Beach / Sunset</td>
+                            <td>West KK (15 min from center)</td>
+                            <td>Late afternoon for sunset</td>
+                        </tr>
+                        <tr>
+                            <td>Gaya Street Market</td>
+                            <td>Shopping / Culture</td>
+                            <td>Gaya Street, City Center</td>
+                            <td>Sunday mornings (6 AM - 1 PM)</td>
+                        </tr>
+                        <tr>
+                            <td>Filipino Market</td>
+                            <td>Shopping / Food</td>
+                            <td>Waterfront, City Center</td>
+                            <td>Evening for seafood dinner</td>
+                        </tr>
+                        <tr>
+                            <td>Likas Bay</td>
+                            <td>Nature / Recreation</td>
+                            <td>Northeast KK</td>
+                            <td>Early morning for jogging</td>
+                        </tr>
+                        <tr>
+                            <td>Kota Kinabalu City Mosque</td>
+                            <td>Religious / Architecture</td>
+                            <td>Likas Bay area</td>
+                            <td>Non-prayer times</td>
+                        </tr>
+                        <tr>
+                            <td>Monsopiad Cultural Village</td>
+                            <td>Cultural / Heritage</td>
+                            <td>Penampang (30 min)</td>
+                            <td>Daytime for tours</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Tunku Abdul Rahman Marine Park</h2>
+                <div class="feature-box">
+                    <img src="images/beach-paradise.jpg" alt="Tropical island beach near KK">
+                    <h3>Island Paradise on Your Doorstep</h3>
+                    <p>Just a 15-20 minute boat ride from Kota Kinabalu's waterfront lies the Tunku Abdul Rahman Marine Park (TARP), a collection of five stunning islands surrounded by coral reefs and crystal-clear waters. The park is named after Malaysia's first Prime Minister and offers world-class snorkeling, diving, and beach activities.</p>
+                    <p>The five islands - Gaya, Sapi, Manukan, Mamutik, and Sulug - each have their own unique character. Manukan is the most developed with facilities and accommodation, Sapi is perfect for snorkeling, and Mamutik offers a more secluded experience.</p>
+                </div>
+
+                <h3>Island Options</h3>
+                <ol class="feature-list">
+                    <li><strong>Gaya Island:</strong> Largest island with luxury resorts and hiking trails</li>
+                    <li><strong>Manukan Island:</strong> Most popular, with good facilities and snorkeling</li>
+                    <li><strong>Sapi Island:</strong> Best for snorkeling and zip-lining to the sea</li>
+                    <li><strong>Mamutik Island:</strong> Smallest and most peaceful, great for relaxation</li>
+                    <li><strong>Sulug Island:</strong> Unspoiled natural beauty, perfect for solitude</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Culture &amp; Cuisine</h2>
+                <div class="feature-box">
+                    <img src="images/local-cuisine.jpg" alt="Sabah local cuisine" class="right">
+                    <h3>Flavors of KK</h3>
+                    <p>Kota Kinabalu is a food lover's paradise. The city's diverse population has created a unique culinary scene blending Malay, Chinese, Indian, and indigenous Bornean influences. Head to the waterfront seafood restaurants for fresh catches prepared to order, or explore the night markets for affordable local favorites.</p>
+                    <p>Don't miss the famous <strong>KK seafood</strong> - particularly the grilled fish, butter prawns, and chili crab. For breakfast, try the local <strong>laksa</strong> or <strong>hinava</strong> (Kadazan-Dusun raw fish salad).</p>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-box-icon">&#127836;</div>
+                    <h4>Food Recommendations</h4>
+                    <ul class="feature-list">
+                        <li><strong>Welcome Seafood Restaurant:</strong> Famous for affordable, fresh seafood</li>
+                        <li><strong>Kedai Kopi Fatt Kee:</strong> Local favorite for traditional breakfast</li>
+                        <li><strong>Tanjung Aru Beach Food Stalls:</strong> Best sunset views with local snacks</li>
+                        <li><strong>Night Market (Filipino Market):</strong> Street food and barbecue seafood</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="media-container">
+                <h3>Discover Kota Kinabalu</h3>
+                <p>Experience the vibrant atmosphere of KK city</p>
+                <br>
+                <video controls poster="images/kk3.png" style="max-width: 100%; border-radius: 10px;">
+                    <source src="videos/kotakinabalu.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+            </section>
+        </div>
+
+        <!-- ==================== MALIAU BASIN ==================== -->
+        <span class="dest-anchor" id="maliau"></span>
+        <div class="destination-section">
+            <div class="destination-header" style="background-image: url('images/maliau-basin.jpg');">
+                <h1>Maliau Basin</h1>
+            </div>
+
+            <section>
+                <h2>Sabah's "Lost World"</h2>
+
+                <div class="quick-facts">
+                    <h4>Quick Facts</h4>
+                    <ul>
+                        <li><strong>Area:</strong> 390 sq km basin</li>
+                        <li><strong>Location:</strong> Interior Sabah, Tawau division</li>
+                        <li><strong>Discovered:</strong> 1947 (first expedition 1988)</li>
+                        <li><strong>Elevation:</strong> Up to 1,600m cliffs</li>
+                        <li><strong>Known For:</strong> Waterfalls, pristine jungle</li>
+                        <li><strong>Difficulty:</strong> Challenging (multi-day treks)</li>
+                        <li><strong>Status:</strong> Class 1 Protected Forest</li>
+                    </ul>
+                </div>
+
+                <p>The <strong>Maliau Basin</strong>, often called "Sabah's Lost World," is one of the most pristine and least explored wilderness areas in Borneo. This remarkable saucer-shaped basin, enclosed by steep cliffs and escarpments reaching up to 1,600 meters, remained undiscovered by the outside world until 1947 when a pilot spotted it from the air. The first scientific expedition didn't enter the basin until 1988, and it remains one of the most remote and untouched rainforest areas in Malaysia.</p>
+
+                <div class="feature-box" style="clear: both;">
+                    <img src="images/maliau-basin.jpg" alt="Maliau Basin waterfall">
+                    <h3>A Jurassic Landscape</h3>
+                    <p>Stepping into Maliau Basin feels like traveling back in time to a prehistoric world. The basin encompasses 390 square kilometers of pristine tropical rainforest, featuring a unique and self-contained ecosystem that has evolved in isolation for millions of years. The dramatic landscape is dotted with cascading waterfalls, crystal-clear rivers, and an incredible diversity of plant and animal life.</p>
+                    <p>The basin's most famous landmark is the spectacular <strong>Maliau Falls</strong>, a seven-tiered waterfall system that drops through the heart of the forest. Each tier offers a different character, from gentle cascades to thundering drops, all surrounded by lush vegetation and misty atmosphere.</p>
+                </div>
+
+                <h3>Why Visit Maliau Basin</h3>
+                <ul class="feature-list">
+                    <li><strong>Untouched Wilderness:</strong> One of the last truly pristine rainforests in Southeast Asia</li>
+                    <li><strong>Unique Biodiversity:</strong> Home to rare and endemic species found nowhere else</li>
+                    <li><strong>Spectacular Waterfalls:</strong> Seven tiers of Maliau Falls plus numerous smaller cascades</li>
+                    <li><strong>Adventure Trekking:</strong> Multi-day jungle expeditions through varied terrain</li>
+                    <li><strong>Photography Paradise:</strong> Stunning landscapes, unique flora, and atmospheric mist</li>
+                    <li><strong>Scientific Significance:</strong> Part of the Heart of Borneo conservation initiative</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Trekking Information</h2>
+                <table class="compact-table">
+                    <thead>
+                        <tr>
+                            <th>Trail</th>
+                            <th>Duration</th>
+                            <th>Difficulty</th>
+                            <th>Highlights</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Agathis Camp - Nepenthes Camp</td>
+                            <td>7 km, 4-5 hours</td>
+                            <td>Moderate</td>
+                            <td>Primary rainforest, wildlife spotting</td>
+                        </tr>
+                        <tr>
+                            <td>Nepenthes Camp - Maliau Falls</td>
+                            <td>5 km, 3-4 hours</td>
+                            <td>Moderate to Challenging</td>
+                            <td>The iconic seven-tiered waterfall</td>
+                        </tr>
+                        <tr>
+                            <td>Takob Akob Falls</td>
+                            <td>2.5 km from Nepenthes</td>
+                            <td>Easy to Moderate</td>
+                            <td>Beautiful 38-meter waterfall</td>
+                        </tr>
+                        <tr>
+                            <td>Ginseng Camp - Helipad</td>
+                            <td>2 km</td>
+                            <td>Easy</td>
+                            <td>Panoramic views of the basin</td>
+                        </tr>
+                        <tr>
+                            <td>Full Basin Circuit</td>
+                            <td>3-5 days</td>
+                            <td>Challenging</td>
+                            <td>Complete Maliau experience</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <div class="info-box-icon">&#127807;</div>
+                    <h4>Conservation Status</h4>
+                    <p>Maliau Basin was designated as a Conservation Area in 1981 and is a key component of the <strong>Heart of Borneo</strong> initiative - a tri-national agreement between Malaysia, Indonesia, and Brunei to protect 220,000 square kilometers of rainforest. In 2012, it was upgraded to a Class 1 Protected Forest Reserve, its highest level of protection.</p>
+                </div>
+
+                <div class="info-box warning">
+                    <div class="info-box-icon">&#9888;</div>
+                    <h4>Important Considerations</h4>
+                    <p>Maliau Basin is a remote and challenging destination. Access requires 4WD vehicles on rough logging roads, and trekking within the basin involves steep terrain and river crossings. This destination is suitable for physically fit travelers with proper trekking experience and equipment.</p>
+                </div>
+
+                <h3>What to Expect</h3>
+                <ol class="feature-list">
+                    <li>Basic camping accommodation at designated campsites</li>
+                    <li>Meals prepared by support staff at camps</li>
+                    <li>Guided treks with experienced local guides mandatory</li>
+                    <li>No phone signal or internet access in the basin</li>
+                    <li>Variable weather - expect rain even during "dry" season</li>
+                    <li>Leech socks and proper trekking gear essential</li>
+                    <li>Permits required - must be arranged in advance</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Best Time to Visit</h2>
+                <table class="compact-table">
+                    <thead>
+                        <tr>
+                            <th>Season</th>
+                            <th>Period</th>
+                            <th>Conditions</th>
+                            <th>Suitability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dry Season</td>
+                            <td>March - September</td>
+                            <td>Less rainfall, lower river levels</td>
+                            <td>Best for trekking</td>
+                        </tr>
+                        <tr>
+                            <td>Wet Season</td>
+                            <td>October - February</td>
+                            <td>Heavy rain, slippery trails</td>
+                            <td>Not recommended</td>
+                        </tr>
+                        <tr>
+                            <td>Waterfalls Peak</td>
+                            <td>November - January</td>
+                            <td>Maximum water flow</td>
+                            <td>Spectacular but risky</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="media-container">
+                <h3>The Sounds of the Lost World</h3>
+                <p>Immerse yourself in the pristine sounds of Maliau's ancient rainforest</p>
+                <br>
+                <audio controls>
+                    <source src="audio/videoplayback.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </section>
+        </div>
+
+        <!-- Call to Action -->
+        <section class="highlight-box">
+            <h3>Ready to Explore Sabah?</h3>
+            <p>Contact us for personalized travel packages, booking assistance, and expert recommendations for your Sabah adventure.</p>
+            <br>
+            <a href="contact.html" class="btn">Plan Your Trip</a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Discover Sabah</h4>
+                <p>Your gateway to the wonders of Borneo.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="about.html">About Sabah</a></p>
+                <p><a href="guide.html">Travel Guide</a></p>
+                <p><a href="gallery.html">Photo Gallery</a></p>
+                <p><a href="contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>&#128205; Jalan Gaya, Kota Kinabalu, Sabah, Malaysia</p>
+                <p>&#128222; +60 88-XXXXXX</p>
+                <p>&#9993; info@discoversabah.com</p>
+            </div>
+        </div>
+        <div class="footer-footer">
+            <p>&copy; 2024 Discover Sabah Tourism. All rights reserved. | Designed for educational purposes</p>
+        </div>
+    </footer>
+</body>
+</html>

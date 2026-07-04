@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture & Heritage - Discover Sabah</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Embedded CSS -->
+    <style>
+        .culture-hero {
+            background-image: url('images/culture-hero.jpg');
+        }
+        .festival-card {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border: 2px solid #e8a838;
+        }
+        .ethnic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .ethnic-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 25px 20px;
+        }
+        .ethnic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .ethnic-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        .ethnic-card h4 {
+            color: #0d5c3f;
+            margin-bottom: 10px;
+        }
+        .ethnic-card p {
+            font-size: 0.9em;
+            color: #555;
+            text-align: center;
+        }
+        .tradition-list {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        .tradition-list h3 {
+            color: #1a7a5a;
+            border-bottom: 2px solid #e8a838;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .tradition-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e8e5;
+        }
+        .tradition-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .tradition-img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        .tradition-content h4 {
+            color: #d4760a;
+            margin-bottom: 5px;
+        }
+        .tradition-content p {
+            font-size: 0.95em;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>Discover Sabah</h1>
+            <p class="tagline">Borneo's Tropical Paradise</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Sabah</a></li>
+            <li><a href="kinabalu.html">Mount Kinabalu</a></li>
+            <li><a href="sipadan.html">Sipadan Island</a></li>
+            <li><a href="sepilok.html">Sepilok</a></li>
+            <li><a href="kk.html">KK City</a></li>
+            <li><a href="maliau.html">Maliau Basin</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="guide.html">Travel Guide</a></li>
+            <li><a href="culture.html" class="active">Culture & Heritage</a></li>
+            <li><a href="food.html">Local Food</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="accommodation.html">Hotels</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &raquo; <span>Culture & Heritage</span>
+        </div>
+
+        <!-- Destination Header -->
+        <div class="destination-header culture-hero" style="background-image: url('https://images.unsplash.com/photo-1528360983277-13d9b152c6d1?w=1200');">
+            <h1>Culture & Heritage</h1>
+        </div>
+
+        <!-- Introduction -->
+        <section>
+            <h2>Rich Cultural Tapestry of Sabah</h2>
+            <p>Sabah is a melting pot of cultures, home to over 32 indigenous ethnic groups, each with its own unique traditions, languages, and customs. From the majestic longhouses of the Rungus people to the vibrant water festivals of the Bajau, Sabah's cultural heritage is as diverse as its natural landscapes. Explore the living traditions that have been passed down through generations and experience the warm hospitality of Sabah's people.</p>
+        </section>
+
+        <!-- Indigenous Peoples Section -->
+        <section>
+            <h2>Indigenous Ethnic Groups</h2>
+            <p>Sabah's population is a beautiful mosaic of indigenous peoples who have called this land home for centuries. Each group contributes unique elements to the state's rich cultural identity.</p>
+
+            <div class="ethnic-grid">
+                <!-- Inline style example -->
+                <div class="ethnic-card" style="border-top: 4px solid #e8a838;">
+                    <div class="ethnic-icon">🏔️</div>
+                    <h4>Kadazan-Dusun</h4>
+                    <p>The largest ethnic group in Sabah, known for their rice cultivation, traditional costumes, and the famous Harvest Festival (Kaamatan).</p>
+                </div>
+                <div class="ethnic-card" style="border-top: 4px solid #0d5c3f;">
+                    <div class="ethnic-icon">🌊</div>
+                    <h4>Bajau</h4>
+                    <p>Often called "Sea Gypsies," the Bajau are master horsemen and skilled fishermen, famous for their Regatta Lepa festival.</p>
+                </div>
+                <div class="ethnic-card" style="border-top: 4px solid #c62828;">
+                    <div class="ethnic-icon">🎯</div>
+                    <h4>Murut</h4>
+                    <p>Known as the "Hill People," the Murut are celebrated for their blowpipe hunting skills, traditional long jumps, and vibrant Pesta Kalimaran.</p>
+                </div>
+                <div class="ethnic-card" style="border-top: 4px solid #1565c0;">
+                    <div class="ethnic-icon">🏠</div>
+                    <h4>Rungus</h4>
+                    <p>Famous for their beautifully decorated longhouses and intricate beadwork, the Rungus preserve ancient traditions in Kudat.</p>
+                </div>
+                <div class="ethnic-card" style="border-top: 4px solid #6a1b9a;">
+                    <div class="ethnic-icon">🎭</div>
+                    <h4>Lundayeh</h4>
+                    <p>Known for their unique bamboo musical instruments and traditional rice wine (tapai), the Lundayeh live in the highlands.</p>
+                </div>
+                <div class="ethnic-card" style="border-top: 4px solid #d84315;">
+                    <div class="ethnic-icon">🌺</div>
+                    <h4>Bisaya</h4>
+                    <p>Coastal dwellers known for their vibrant water festivals, traditional boat-making, and delicious seafood cuisine.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Traditional Festivals -->
+        <section>
+            <h2>Traditional Festivals</h2>
+            <p>Sabah's calendar is filled with colorful festivals that celebrate harvests, cultural heritage, and community spirit. These events offer visitors a chance to witness authentic traditions and join in the celebrations.</p>
+
+            <div class="card-grid">
+                <div class="card festival-card">
+                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600" alt="Harvest Festival">
+                    <div class="card-content">
+                        <h3>Kaamatan - Harvest Festival</h3>
+                        <p><strong>When:</strong> May 30-31</p>
+                        <p>The most important festival for the Kadazan-Dusun people, celebrating the rice harvest with traditional dances, buffalo races, and the crowning of the Harvest Festival Queen (Unduk Ngadau).</p>
+                    </div>
+                </div>
+                <div class="card festival-card">
+                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600" alt="Regatta Lepa">
+                    <div class="card-content">
+                        <h3>Regatta Lepa</h3>
+                        <p><strong>When:</strong> April</p>
+                        <p>A spectacular Bajau water festival in Semporna featuring beautifully decorated traditional sailing boats (lepa), cultural performances, and sea sports competitions.</p>
+                    </div>
+                </div>
+                <div class="card festival-card">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600" alt="Pesta Kalimaran">
+                    <div class="card-content">
+                        <h3>Pesta Kalimaran</h3>
+                        <p><strong>When:</strong> March</p>
+                        <p>The Murut cultural festival showcasing traditional games, blowpipe competitions, cultural dances, and the unique ritual of Magunatip (bamboo dance).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural Traditions -->
+        <section>
+            <div class="tradition-list">
+                <h3>🎨 Traditional Arts & Crafts</h3>
+
+                <div class="tradition-item">
+                    <img src="https://images.unsplash.com/photo-1605648916319-cf082f7524a1?w=300" alt="Beadwork" class="tradition-img">
+                    <div class="tradition-content">
+                        <h4>Intricate Beadwork</h4>
+                        <p>Sabah's indigenous communities are renowned for their exquisite beadwork, creating colorful necklaces, bracelets, and decorative items. Each pattern and color combination carries cultural significance and tells stories of the community's heritage.</p>
+                    </div>
+                </div>
+
+                <div class="tradition-item">
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=300" alt="Weaving" class="tradition-img">
+                    <div class="tradition-content">
+                        <h4>Traditional Weaving</h4>
+                        <p>The Rungus and Dusun people produce beautiful woven textiles using backstrap looms. These fabrics, known as <em>sinulaman</em>, feature geometric patterns and are used in traditional costumes and ceremonial dress.</p>
+                    </div>
+                </div>
+
+                <div class="tradition-item">
+                    <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=300" alt="Bamboo Craft" class="tradition-img">
+                    <div class="tradition-content">
+                        <h4>Bamboo Crafts & Musical Instruments</h4>
+                        <p>Bamboo is a versatile material used to create everything from musical instruments like the <em>sompoton</em> (mouth organ) and <em>tongkungon</em> (bamboo zither) to household items and decorative crafts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural Experiences Table -->
+        <section>
+            <h2>Cultural Experience Packages</h2>
+            <p>Immerse yourself in Sabah's rich heritage with these curated cultural experiences:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Experience</th>
+                        <th>Location</th>
+                        <th>Duration</th>
+                        <th>Price (MYR)</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mari-Mari Cultural Village Tour</td>
+                        <td>Kota Kinabalu</td>
+                        <td>Half Day</td>
+                        <td>180</td>
+                        <td>Families, First-time Visitors</td>
+                    </tr>
+                    <tr>
+                        <td>Rungus Longhouse Homestay</td>
+                        <td>Kudat</td>
+                        <td>2 Days 1 Night</td>
+                        <td>350</td>
+                        <td>Culture Enthusiasts</td>
+                    </tr>
+                    <tr>
+                        <td>Kaamatan Festival Experience</td>
+                        <td>KDCA Penampang</td>
+                        <td>Full Day</td>
+                        <td>120</td>
+                        <td>Festival Lovers</td>
+                    </tr>
+                    <tr>
+                        <td>Traditional Cooking Class</td>
+                        <td>Various Locations</td>
+                        <td>4 Hours</td>
+                        <td>150</td>
+                        <td>Foodies</td>
+                    </tr>
+                    <tr>
+                        <td>Bajau Water Village Visit</td>
+                        <td>Semporna</td>
+                        <td>Half Day</td>
+                        <td>200</td>
+                        <td>Adventure Seekers</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Info Box -->
+        <div class="info-box tip">
+            <div class="info-box-icon">💡</div>
+            <h4>Cultural Etiquette Tips</h4>
+            <ul class="feature-list">
+                <li>Always ask permission before taking photos of people or inside longhouses</li>
+                <li>Remove shoes when entering traditional homes</li>
+                <li>Dress modestly when visiting villages and religious sites</li>
+                <li>Accept food and drinks offered as a sign of hospitality</li>
+                <li>Learn a few basic greetings in the local language - it goes a long way!</li>
+            </ul>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="highlight-box">
+            <h3>Experience Authentic Sabah Culture</h3>
+            <p>Want to immerse yourself in Sabah's rich cultural heritage? Book a cultural tour or homestay experience today!</p>
+            <a href="contact.html" class="btn">Book a Cultural Experience</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Discover Sabah</h4>
+                <p>Your ultimate guide to exploring the natural beauty and cultural richness of Sabah, Malaysian Borneo.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="guide.html">Travel Guide</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@discoversabah.com</p>
+                <p>Phone: +60 88-250 000</p>
+                <p>Kota Kinabalu, Sabah</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Discover Sabah Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

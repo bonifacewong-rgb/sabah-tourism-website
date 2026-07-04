@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities & Adventures - Discover Sabah</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Embedded CSS -->
+    <style>
+        .activities-hero {
+            background-image: url('images/activities-hero.jpg');
+        }
+        .activity-category {
+            margin: 40px 0;
+        }
+        .activity-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 25px;
+        }
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .activity-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        .activity-content {
+            padding: 25px;
+        }
+        .activity-content h3 {
+            color: #0d5c3f;
+            margin-top: 0;
+        }
+        .activity-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .activity-meta span {
+            background: #e8f5e9;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #0d5c3f;
+            font-weight: 600;
+        }
+        .difficulty {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        .difficulty-easy { background: #c8e6c9; color: #2e7d32; }
+        .difficulty-moderate { background: #fff9c4; color: #f57f17; }
+        .difficulty-hard { background: #ffcdd2; color: #c62828; }
+        .seasonal-banner {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 5px solid #1565c0;
+            padding: 20px 25px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
+        .video-section {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .video-section h3 {
+            color: #1a7a5a;
+            margin-bottom: 15px;
+        }
+        .video-section video {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>Discover Sabah</h1>
+            <p class="tagline">Borneo's Tropical Paradise</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Sabah</a></li>
+            <li><a href="kinabalu.html">Mount Kinabalu</a></li>
+            <li><a href="sipadan.html">Sipadan Island</a></li>
+            <li><a href="sepilok.html">Sepilok</a></li>
+            <li><a href="kk.html">KK City</a></li>
+            <li><a href="maliau.html">Maliau Basin</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="guide.html">Travel Guide</a></li>
+            <li><a href="culture.html">Culture & Heritage</a></li>
+            <li><a href="food.html">Local Food</a></li>
+            <li><a href="activities.html" class="active">Activities</a></li>
+            <li><a href="accommodation.html">Hotels</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &raquo; <span>Activities & Adventures</span>
+        </div>
+
+        <!-- Destination Header -->
+        <div class="destination-header activities-hero" style="background-image: url('https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=1200');">
+            <h1>Activities & Adventures</h1>
+        </div>
+
+        <!-- Introduction -->
+        <section>
+            <h2>Your Adventure Playground Awaits</h2>
+            <p>Sabah is an adrenaline junkie's dream destination. From scaling Southeast Asia's highest peak to diving with sharks in world-class waters, from white-water rafting through rainforest rivers to spotting wild orangutans in their natural habitat - Sabah offers adventures for every thrill level. Whether you're a seasoned explorer or a first-time adventurer, there's an unforgettable experience waiting for you in the Land Below the Wind.</p>
+        </section>
+
+        <!-- Stats -->
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Adventure Activities</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Dive Sites</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">15</div>
+                <div class="stat-label">National Parks</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">4,095m</div>
+                <div class="stat-label">Highest Peak</div>
+            </div>
+        </div>
+
+        <!-- Mountain Adventures -->
+        <section class="activity-category">
+            <h2>⛰️ Mountain & Jungle Adventures</h2>
+
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200" alt="Mount Kinabalu Climb">
+                <div class="activity-content">
+                    <h3>Mount Kinabalu Summit Trek</h3>
+                    <span class="difficulty difficulty-hard">HARD</span>
+                    <div class="activity-meta">
+                        <span>⏱️ 2 Days</span>
+                        <span>📍 Kinabalu Park</span>
+                        <span>💰 RM 1,500+</span>
+                        <span>⭐ 5/5 Rating</span>
+                    </div>
+                    <p>Conquer Southeast Asia's highest peak at 4,095 meters. This challenging 2-day trek takes you through diverse ecosystems from tropical rainforest to alpine meadows, culminating in a breathtaking sunrise at Low's Peak. A permit and mountain guide are mandatory. Book 3-6 months in advance as slots fill up quickly.</p>
+                    <p><strong>Best Time:</strong> March to September | <strong>Fitness Level:</strong> High | <strong>Permit Required:</strong> Yes</p>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200" alt="Jungle Trekking">
+                <div class="activity-content">
+                    <h3>Danum Valley Jungle Trekking</h3>
+                    <span class="difficulty difficulty-moderate">MODERATE</span>
+                    <div class="activity-meta">
+                        <span>⏱️ 3-5 Days</span>
+                        <span>📍 Danum Valley</span>
+                        <span>💰 RM 2,000+</span>
+                        <span>⭐ 4.8/5 Rating</span>
+                    </div>
+                    <p>Explore one of the world's oldest rainforests in the Danum Valley Conservation Area. Trek through pristine primary forest, spot wild orangutans, pygmy elephants, and clouded leopards. Stay at the Borneo Rainforest Lodge for a luxury jungle experience, or camp under the stars at the research center.</p>
+                    <p><strong>Best Time:</strong> Year-round (drier: March-Oct) | <strong>Fitness Level:</strong> Moderate | <strong>Guide Required:</strong> Yes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Water Adventures -->
+        <section class="activity-category">
+            <h2>🌊 Water Adventures</h2>
+
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200" alt="Scuba Diving">
+                <div class="activity-content">
+                    <h3>Scuba Diving at Sipadan Island</h3>
+                    <span class="difficulty difficulty-moderate">MODERATE</span>
+                    <div class="activity-meta">
+                        <span>⏱️ Half Day - Full Day</span>
+                        <span>📍 Sipadan Island</span>
+                        <span>💰 RM 400+ per dive</span>
+                        <span>⭐ 5/5 Rating</span>
+                    </div>
+                    <p>Dive into one of the world's top diving destinations. Sipadan offers wall diving, turtle encounters, shark sightings, and incredible coral biodiversity. Jacques Cousteau called it "an untouched piece of art." Only 120 dive permits are issued daily, so book well in advance. Advanced Open Water certification required.</p>
+                    <p><strong>Best Time:</strong> April to December | <strong>Certification:</strong> AOW Required | <strong>Permit:</strong> Limited Daily</p>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1530866495561-507c9faab2ed?w=1200" alt="White Water Rafting">
+                <div class="activity-content">
+                    <h3>White Water Rafting - Kiulu River</h3>
+                    <span class="difficulty difficulty-easy">EASY</span>
+                    <div class="activity-meta">
+                        <span>⏱️ Half Day</span>
+                        <span>📍 Kiulu, Tuaran</span>
+                        <span>💰 RM 150+</span>
+                        <span>⭐ 4.5/5 Rating</span>
+                    </div>
+                    <p>Perfect for beginners and families, the Kiulu River offers Grade I-II rapids through scenic countryside. Paddle through gentle rapids, swim in calm sections, and enjoy the lush rainforest scenery. For more thrill, try the Padas River with Grade III-IV rapids - Sabah's most challenging white water!</p>
+                    <p><strong>Best Time:</strong> Year-round | <strong>Age Limit:</strong> 6+ (Kiulu), 16+ (Padas) | <strong>Equipment:</strong> Provided</p>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=1200" alt="Island Hopping">
+                <div class="activity-content">
+                    <h3>Tunku Abdul Rahman Park Island Hopping</h3>
+                    <span class="difficulty difficulty-easy">EASY</span>
+                    <div class="activity-meta">
+                        <span>⏱️ Full Day</span>
+                        <span>📍 Kota Kinabalu</span>
+                        <span>💰 RM 200+</span>
+                        <span>⭐ 4.7/5 Rating</span>
+                    </div>
+                    <p>Explore five stunning islands just minutes from Kota Kinabalu by speedboat. Snorkel in crystal-clear waters, relax on white-sand beaches, and enjoy beachside BBQ lunches. Each island offers unique experiences - from Sapi Island's coral gardens to Manukan's hiking trails. Perfect for families and beach lovers.</p>
+                    <p><strong>Best Time:</strong> Year-round | <strong>Includes:</strong> Boat, Snorkel Gear, Lunch | <strong>Booking:</strong> Walk-in OK</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wildlife Adventures -->
+        <section class="activity-category">
+            <h2>🦧 Wildlife Encounters</h2>
+
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1559252667-9f280314a3e6?w=1200" alt="Wildlife Safari">
+                <div class="activity-content">
+                    <h3>Kinabatangan River Safari</h3>
+                    <span class="difficulty difficulty-easy">EASY</span>
+                    <div class="activity-meta">
+                        <span>⏱️ 2-3 Days</span>
+                        <span>📍 Kinabatangan</span>
+                        <span>💰 RM 800+</span>
+                        <span>⭐ 4.9/5 Rating</span>
+                    </div>
+                    <p>Cruise along Borneo's longest river and spot incredible wildlife in their natural habitat. See proboscis monkeys, orangutans, pygmy elephants, crocodiles, and hundreds of bird species. Early morning and late afternoon cruises offer the best wildlife viewing. Stay in eco-lodges along the river for the full experience.</p>
+                    <p><strong>Best Time:</strong> March to October | <strong>Guides:</strong> Expert Naturalists | <strong>Includes:</strong> Meals & Accommodation</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seasonal Banner -->
+        <div class="seasonal-banner">
+            <h4>📅 Seasonal Activities Calendar</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Best Activities</th>
+                        <th>Weather</th>
+                        <th>Crowd Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>March - May</td>
+                        <td>Mount Kinabalu, Diving, Festivals</td>
+                        <td>Dry, Clear</td>
+                        <td>Moderate</td>
+                    </tr>
+                    <tr>
+                        <td>June - August</td>
+                        <td>All Activities (Peak Season)</td>
+                        <td>Dry, Hot</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>September - October</td>
+                        <td>Diving, Wildlife, Trekking</td>
+                        <td>Dry, Pleasant</td>
+                        <td>Moderate</td>
+                    </tr>
+                    <tr>
+                        <td>November - February</td>
+                        <td>Culture, Food Tours, City</td>
+                        <td>Wet, Cool</td>
+                        <td>Low</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Video Section -->
+        <div class="video-section">
+            <h3>🎬 Sabah Adventure Highlights</h3>
+            <p>Watch the thrill of Sabah's top adventures in action!</p>
+            <video controls poster="images/video-poster.jpg">
+                <source src="videos/sabah-adventures.mp4" type="video/mp4">
+                Your browser does not support the video element. (Note: Add a video file to the videos folder)
+            </video>
+        </div>
+
+        <!-- Info Box -->
+        <div class="info-box warning">
+            <div class="info-box-icon">⚠️</div>
+            <h4>Safety First - Adventure Guidelines</h4>
+            <ul class="feature-list">
+                <li>Always use licensed operators and certified guides</li>
+                <li>Check weather conditions before outdoor activities</li>
+                <li>Carry sufficient water and sun protection</li>
+                <li>Inform someone of your itinerary before remote treks</li>
+                <li>Respect wildlife - maintain safe distances at all times</li>
+                <li>Travel insurance covering adventure activities is strongly recommended</li>
+            </ul>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="highlight-box">
+            <h3>Ready for Your Sabah Adventure?</h3>
+            <p>Contact us to customize your perfect adventure itinerary with trusted local operators!</p>
+            <a href="contact.html" class="btn">Plan Your Adventure</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Discover Sabah</h4>
+                <p>Your ultimate guide to exploring the natural beauty and cultural richness of Sabah, Malaysian Borneo.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="guide.html">Travel Guide</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@discoversabah.com</p>
+                <p>Phone: +60 88-250 000</p>
+                <p>Kota Kinabalu, Sabah</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Discover Sabah Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

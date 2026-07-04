@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Food - Discover Sabah</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Embedded CSS -->
+    <style>
+        .food-hero {
+            background-image: url('images/food-hero.jpg');
+        }
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .food-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .food-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .food-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .food-card-content {
+            padding: 20px;
+        }
+        .food-card-content h3 {
+            margin-top: 0;
+            color: #c62828;
+        }
+        .food-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #e8a838 0%, #f0c050 100%);
+            color: #333;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .food-card-content p {
+            font-size: 0.95em;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .price-tag {
+            color: #0d5c3f;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .market-section {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        .market-section h3 {
+            color: #e65100;
+            border-bottom: 2px solid #e8a838;
+            padding-bottom: 10px;
+        }
+        .market-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .market-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            flex: 1 1 250px;
+        }
+        .market-item h4 {
+            color: #0d5c3f;
+            margin-bottom: 5px;
+        }
+        .market-item p {
+            font-size: 0.9em;
+            margin-bottom: 0;
+        }
+        .recipe-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-left: 5px solid #e8a838;
+        }
+        .recipe-box h4 {
+            color: #d4760a;
+            margin-bottom: 10px;
+        }
+        .recipe-box ol {
+            margin-left: 20px;
+        }
+        .recipe-box ol li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>Discover Sabah</h1>
+            <p class="tagline">Borneo's Tropical Paradise</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Sabah</a></li>
+            <li><a href="kinabalu.html">Mount Kinabalu</a></li>
+            <li><a href="sipadan.html">Sipadan Island</a></li>
+            <li><a href="sepilok.html">Sepilok</a></li>
+            <li><a href="kk.html">KK City</a></li>
+            <li><a href="maliau.html">Maliau Basin</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="guide.html">Travel Guide</a></li>
+            <li><a href="culture.html">Culture & Heritage</a></li>
+            <li><a href="food.html" class="active">Local Food</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="accommodation.html">Hotels</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &raquo; <span>Local Food</span>
+        </div>
+
+        <!-- Destination Header -->
+        <div class="destination-header food-hero" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200');">
+            <h1>Local Food & Cuisine</h1>
+        </div>
+
+        <!-- Introduction -->
+        <section>
+            <h2>Flavors of Borneo</h2>
+            <p>Sabah's cuisine is a delightful fusion of Malay, Chinese, and indigenous influences, creating a unique culinary identity that reflects the state's multicultural heritage. From fresh seafood caught daily in the South China Sea to exotic fruits found only in Borneo's rainforests, Sabah offers an unforgettable gastronomic adventure. Whether you're dining at a high-end restaurant in Kota Kinabalu or sampling street food at a night market, every meal tells a story of the land and its people.</p>
+        </section>
+
+        <!-- Must-Try Dishes -->
+        <section>
+            <h2>Must-Try Sabah Dishes</h2>
+            <p>No visit to Sabah is complete without tasting these iconic local dishes:</p>
+
+            <div class="food-grid">
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600" alt="Hinava">
+                    <div class="food-card-content">
+                        <span class="food-tag">Kadazan-Dusun</span>
+                        <h3>Hinava</h3>
+                        <p>A refreshing raw fish salad made with fresh mackerel, lime juice, shallots, ginger, and chili. Sabah's answer to ceviche!</p>
+                        <p class="price-tag">~ RM 15-25</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600" alt="Tuaran Mee">
+                    <div class="food-card-content">
+                        <span class="food-tag">Chinese-Sabahan</span>
+                        <h3>Tuaran Mee</h3>
+                        <p>Handmade egg noodles from Tuaran town, stir-fried with char siu (BBQ pork), vegetables, and egg. A Sabah breakfast staple.</p>
+                        <p class="price-tag">~ RM 8-15</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600" alt="Soto">
+                    <div class="food-card-content">
+                        <span class="food-tag">Malay</span>
+                        <h3>Soto Sabah</h3>
+                        <p>A comforting chicken or beef soup with rice cakes, bean sprouts, and a rich, aromatic broth flavored with turmeric and lemongrass.</p>
+                        <p class="price-tag">~ RM 7-12</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=600" alt="Fresh Seafood">
+                    <div class="food-card-content">
+                        <span class="food-tag">Seafood</span>
+                        <h3>Fresh Grilled Seafood</h3>
+                        <p>Choose your catch at the Filipino Market or seafood restaurants. Tiger prawns, lobsters, and fish grilled to perfection with sambal.</p>
+                        <p class="price-tag">~ RM 30-80</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1604908177453-7462950a6a3b?w=600" alt="Bambangan">
+                    <div class="food-card-content">
+                        <span class="food-tag">Indigenous</span>
+                        <h3>Bambangan</h3>
+                        <p>A wild mango unique to Borneo, typically pickled and served as a tangy side dish with rice. A true taste of the rainforest!</p>
+                        <p class="price-tag">~ RM 5-10</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600" alt="Laksa">
+                    <div class="food-card-content">
+                        <span class="food-tag">Nyonya</span>
+                        <h3>Sabah Laksa</h3>
+                        <p>A coconut-based curry laksa with thick rice noodles, prawns, chicken, and tofu puffs. Rich, creamy, and full of flavor.</p>
+                        <p class="price-tag">~ RM 8-15</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Box with Float -->
+        <section>
+            <div class="feature-box">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="Night Market">
+                <h3>Sabah Night Markets - A Food Lover's Paradise</h3>
+                <p>Sabah's night markets are where the real culinary magic happens. As the sun sets, streets come alive with sizzling woks, grilling satay, and the aroma of spices. The most famous is the <strong>Filipino Market (Pasar Besar Kota Kinabalu)</strong>, where you can pick fresh seafood and have it cooked on the spot. Don't miss the <strong>Gaya Street Sunday Market</strong> for local snacks, fruits, and handicrafts. For an authentic experience, visit the <strong>Api-Api Night Food Market</strong> where locals gather for affordable, delicious meals.</p>
+                <p>Popular night market foods include grilled chicken wings, satay skewers, <em>roti canai</em> (flaky flatbread), <em>kuih cincin</em> (ring-shaped cookies), and refreshing <em>ais kacang</em> (shaved ice dessert). The atmosphere is lively, the food is cheap, and the flavors are unforgettable!</p>
+            </div>
+        </section>
+
+        <!-- Exotic Fruits Section -->
+        <section>
+            <h2>Exotic Sabah Fruits</h2>
+            <p>Sabah's tropical climate produces some of the most unique and delicious fruits in the world. Here are some you must try:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fruit</th>
+                        <th>Local Name</th>
+                        <th>Season</th>
+                        <th>Taste Profile</th>
+                        <th>Where to Find</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Durian</td>
+                        <td>Durian</td>
+                        <td>June - August</td>
+                        <td>Creamy, rich, pungent</td>
+                        <td>Night markets, fruit stalls</td>
+                    </tr>
+                    <tr>
+                        <td>Tarap</td>
+                        <td>Marang</td>
+                        <td>July - September</td>
+                        <td>Sweet, custard-like</td>
+                        <td>Local markets, roadside</td>
+                    </tr>
+                    <tr>
+                        <td>Rambutan</td>
+                        <td>Rambutan</td>
+                        <td>June - September</td>
+                        <td>Juicy, sweet, slightly acidic</td>
+                        <td>Markets, supermarkets</td>
+                    </tr>
+                    <tr>
+                        <td>Mangosteen</td>
+                        <td>Manggis</td>
+                        <td>June - August</td>
+                        <td>Sweet, tangy, refreshing</td>
+                        <td>Night markets</td>
+                    </tr>
+                    <tr>
+                        <td>Langsat</td>
+                        <td>Langsat</td>
+                        <td>October - December</td>
+                        <td>Sweet, slightly sour</td>
+                        <td>Roadside stalls</td>
+                    </tr>
+                    <tr>
+                        <td>Dabai</td>
+                        <td>Dabai</td>
+                        <td>December - February</td>
+                        <td>Savory, olive-like</td>
+                        <td>Local markets</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Best Food Markets -->
+        <div class="market-section">
+            <h3>🍜 Best Places to Eat in Sabah</h3>
+            <div class="market-list">
+                <div class="market-item">
+                    <h4>Filipino Market (Pasar Besar)</h4>
+                    <p>Kota Kinabalu waterfront. Fresh seafood cooked to order. Open daily 5 PM - 12 AM.</p>
+                </div>
+                <div class="market-item">
+                    <h4>Gaya Street Sunday Market</h4>
+                    <p>Historic KK street. Local snacks, fruits & crafts. Every Sunday 6 AM - 1 PM.</p>
+                </div>
+                <div class="market-item">
+                    <h4>Api-Api Night Food Court</h4>
+                    <p>Affordable local dishes. Popular with locals. Open daily 5 PM - 11 PM.</p>
+                </div>
+                <div class="market-item">
+                    <h4>Tanjung Aru Beach Food Stalls</h4>
+                    <p>Beachside dining with sunset views. Best for grilled corn and coconut drinks.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recipe Box -->
+        <section>
+            <h2>Try Making Hinava at Home!</h2>
+            <div class="recipe-box">
+                <h4>🐟 Traditional Hinava Recipe</h4>
+                <p><strong>Ingredients:</strong> 300g fresh mackerel (or any white fish), 5 limes, 1 red onion (sliced), 2 bird's eye chilies, 1-inch ginger (julienned), salt to taste.</p>
+                <p><strong>Instructions:</strong></p>
+                <ol>
+                    <li>Finely dice the fresh fish into small cubes.</li>
+                    <li>Squeeze lime juice over the fish and let it "cook" in the acid for 10 minutes.</li>
+                    <li>Drain excess lime juice and mix in sliced onions, chilies, and ginger.</li>
+                    <li>Season with salt to taste.</li>
+                    <li>Serve chilled with steamed rice and sliced cucumber.</li>
+                </ol>
+                <p><em>Tip: The fresher the fish, the better! This dish is best enjoyed within a few hours of preparation.</em></p>
+            </div>
+        </section>
+
+        <!-- Info Box -->
+        <div class="info-box">
+            <div class="info-box-icon">🍽️</div>
+            <h4>Dining Tips for Visitors</h4>
+            <ul class="feature-list">
+                <li>Most local eateries are cash-only - bring small bills</li>
+                <li>Breakfast favorites: Tuaran Mee, Roti Canai, Kolo Mee</li>
+                <li>Ask for "kurang pedas" if you prefer less spicy food</li>
+                <li>Seafood is freshest and cheapest at the Filipino Market</li>
+                <li>Try "teh tarik" (pulled milk tea) - Malaysia's national drink</li>
+            </ul>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="highlight-box">
+            <h3>Hungry for More Sabah Flavors?</h3>
+            <p>Join our guided food tour and taste the best of Sabah's culinary scene with a local expert!</p>
+            <a href="contact.html" class="btn">Book a Food Tour</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Discover Sabah</h4>
+                <p>Your ultimate guide to exploring the natural beauty and cultural richness of Sabah, Malaysian Borneo.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="guide.html">Travel Guide</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@discoversabah.com</p>
+                <p>Phone: +60 88-250 000</p>
+                <p>Kota Kinabalu, Sabah</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Discover Sabah Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
